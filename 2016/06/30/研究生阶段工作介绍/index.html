@@ -1,0 +1,944 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="CFD," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="目标：写出能用于旋翼（Rotor）飞行器流体模拟计算的软件2016年6月1日 儿童节  与师弟合作下，目标达成。   主要就是写了个软件，用之做了点研究。专栏：流场求解器初探交流学习：hangzs@nuaa.edu.cn   软件简介1. RotorAS-3D 2016.6 完成，全速域3D版本，最终代码量2万行左右。包含以下功能：  前处理-结构网格生成、非结构网格生成以及混合网格生成 结构网格">
+<meta name="keywords" content="CFD">
+<meta property="og:type" content="article">
+<meta property="og:title" content="研究生阶段Solver开发工作介绍">
+<meta property="og:url" content="http://yoursite.com/2016/06/30/研究生阶段工作介绍/index.html">
+<meta property="og:site_name" content="航哥的小站">
+<meta property="og:description" content="目标：写出能用于旋翼（Rotor）飞行器流体模拟计算的软件2016年6月1日 儿童节  与师弟合作下，目标达成。   主要就是写了个软件，用之做了点研究。专栏：流场求解器初探交流学习：hangzs@nuaa.edu.cn   软件简介1. RotorAS-3D 2016.6 完成，全速域3D版本，最终代码量2万行左右。包含以下功能：  前处理-结构网格生成、非结构网格生成以及混合网格生成 结构网格">
+<meta property="og:updated_time" content="2017-04-12T13:24:23.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="研究生阶段Solver开发工作介绍">
+<meta name="twitter:description" content="目标：写出能用于旋翼（Rotor）飞行器流体模拟计算的软件2016年6月1日 儿童节  与师弟合作下，目标达成。   主要就是写了个软件，用之做了点研究。专栏：流场求解器初探交流学习：hangzs@nuaa.edu.cn   软件简介1. RotorAS-3D 2016.6 完成，全速域3D版本，最终代码量2万行左右。包含以下功能：  前处理-结构网格生成、非结构网格生成以及混合网格生成 结构网格">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '6355745518898906000',
+      author: '博主小哥'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/06/30/研究生阶段工作介绍/"/>
+
+
+
+
+
+  <title> 研究生阶段Solver开发工作介绍 | 航哥的小站 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">航哥的小站</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">航哥的小站</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            专题
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/06/30/研究生阶段工作介绍/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="szhang">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="航哥的小站">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="航哥的小站" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                研究生阶段Solver开发工作介绍
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表：</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-06-30T16:44:43+08:00">
+                2016-06-30
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              <span class="post-meta-item-text">更新：</span>
+              <time title="更新：" itemprop="dateModified" datetime="2017-04-12T21:24:23+08:00">
+                2017-04-12
+              </time>
+            
+          </span>
+
+		  
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">专题：</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/大学/" itemprop="url" rel="index">
+                    <span itemprop="name">大学</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <a href="/2016/06/30/研究生阶段工作介绍/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/30/研究生阶段工作介绍/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/06/30/研究生阶段工作介绍/" class="leancloud_visitors" data-flag-title="研究生阶段Solver开发工作介绍">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数： </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote class="blockquote-center"><strong>目标：写出能用于旋翼（Rotor）飞行器流体模拟计算的软件</strong><br>2016年6月1日 儿童节  与师弟合作下，目标达成。</blockquote>
+
+
+<p>主要就是写了个软件，用之做了点研究。<br>专栏：<a href="https://zhuanlan.zhihu.com/solver" target="_blank" rel="external">流场求解器初探</a><br>交流学习：hangzs@nuaa.edu.cn </p>
+<hr>
+<h4 id="软件简介"><a href="#软件简介" class="headerlink" title="软件简介"></a>软件简介</h4><h5 id="1-RotorAS-3D"><a href="#1-RotorAS-3D" class="headerlink" title="1. RotorAS-3D"></a>1. <code>RotorAS-3D</code></h5><blockquote>
+<p>2016.6 完成，全速域3D版本，最终代码量2万行左右。<br>包含以下功能：</p>
+<ol>
+<li>前处理-结构网格生成、非结构网格生成以及混合网格生成<br> 结构网格：代数法法向推进，泊松方程光顺；非结构网格：阵面推进法</li>
+<li>求解器—基于密度，可用于全速域流场求解计算<br> 空间离散：JST、Roe格式；时间离散：统一采用双时间步法，隐式推进；离散方程组求解方法：LU-SGS<br> 湍流模型：SA 和 k-omg SST<br> 不可压缩计算采用预处理技术，动态计算采用非结构网格的嵌套网格技术和动网格技术</li>
+<li>后处理——模拟数据处理与可视化</li>
+<li>GUI设设计</li>
+</ol>
+</blockquote>
+<h5 id="2-RotorAS-2D"><a href="#2-RotorAS-2D" class="headerlink" title="2. RotorAS-2D"></a>2. RotorAS-2D</h5><blockquote>
+<p>2016.2 完成，全速域2D版本。</p>
+</blockquote>
+<h5 id="3-RotorC-2D"><a href="#3-RotorC-2D" class="headerlink" title="3.RotorC-2D"></a>3.RotorC-2D</h5><blockquote>
+<p>2016.2 完成，可压缩2D版本，功能比 RotorAS-2D版本弱一些，计算不可压由于特征值量级差异导致收敛困难</p>
+</blockquote>
+<blockquote class="blockquote-center">软件开发者：孙振航 桑树浩<br>单位：旋翼动力学国家级重点实验室</blockquote>
+
+<h4 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h4><h5 id="3D"><a href="#3D" class="headerlink" title="3D"></a>3D</h5><blockquote>
+<p><a href="http://v.youku.com/v_show/id_XMTc1NzQwNzQ1Mg==.html" target="_blank" rel="external">Adaptive Grid</a><br><a href="http://v.youku.com/v_show/id_XMTY0NzM1MDQyMA==.html" target="_blank" rel="external">The Curl Distribution in Rotor Wake</a></p>
+</blockquote>
+<h5 id="2D"><a href="#2D" class="headerlink" title="2D"></a>2D</h5><blockquote>
+<p><a href="http://v.youku.com/v_show/id_XMTYxOTU0MzQ5Mg==.html" target="_blank" rel="external">Pressure Distribution of Dynamic Stall in Reverse Flow</a><br><a href="http://v.youku.com/v_show/id_XMTYxOTU0MzgyNA==.html" target="_blank" rel="external">Wake Vortex Street after Aerodynamic Trailing Edge</a></p>
+</blockquote>
+<h5 id="Grid-generation"><a href="#Grid-generation" class="headerlink" title="Grid generation"></a>Grid generation</h5><blockquote>
+<p><a href="http://v.youku.com/v_show/id_XMTYxOTU0NDUzMg==.html" target="_blank" rel="external">Structured Grid Generation around NACA0012</a><br><a href="http://v.youku.com/v_show/id_XMTYxOTU0NDc2OA==.html" target="_blank" rel="external">Unstructured Grid Generation outside Structured Grid</a></p>
+</blockquote>
+<h5 id="Download-试用"><a href="#Download-试用" class="headerlink" title="Download(试用)"></a>Download(试用)</h5><blockquote>
+<p>3D-version: <a href="https://github.com/hangsz/RotorAS-3D" target="_blank" rel="external">RotorAS-3D</a><br>2D-version: <a href="https://github.com/hangsz/RotorAS-2D" target="_blank" rel="external">RotorAS-2D</a></p>
+</blockquote>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CFD/" rel="tag"># CFD</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/26/打通思路之编译与链接(1)-编译/" rel="next" title="打通思路之编译与链接(1)-编译">
+                <i class="fa fa-chevron-left"></i> 打通思路之编译与链接(1)-编译
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/04/22/Flux-Vector-Splitting（FVS）-方法与-Flux-Difference-Splitting（FDS）的区别/" rel="prev" title="Flux Vector Splitting（FVS） 方法与 Flux Difference Splitting（FDS）的区别">
+                Flux Vector Splitting（FVS） 方法与 Flux Difference Splitting（FDS）的区别 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/06/30/研究生阶段工作介绍/"
+           data-title="研究生阶段Solver开发工作介绍" data-url="http://yoursite.com/2016/06/30/研究生阶段工作介绍/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="szhang" />
+          <p class="site-author-name" itemprop="name">szhang</p>
+          <p class="site-description motion-element" itemprop="description">我想要自由，像呼吸一样渴望。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">28</span>
+              <span class="site-state-item-name">文章</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">专题</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/hangsz" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/HANGZS" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              相关链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://zhuanlan.zhihu.com/solver?author=HANGZS" title="流场求解器初探" target="_blank">流场求解器初探</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://zhuanlan.zhihu.com/c_33038803?author=HANGZS" title="流体探秘" target="_blank">流体探秘</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#软件简介"><span class="nav-number">1.</span> <span class="nav-text">软件简介</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-RotorAS-3D"><span class="nav-number">1.1.</span> <span class="nav-text">1. RotorAS-3D</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-RotorAS-2D"><span class="nav-number">1.2.</span> <span class="nav-text">2. RotorAS-2D</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-RotorC-2D"><span class="nav-number">1.3.</span> <span class="nav-text">3.RotorC-2D</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Demo"><span class="nav-number">2.</span> <span class="nav-text">Demo</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3D"><span class="nav-number">2.1.</span> <span class="nav-text">3D</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2D"><span class="nav-number">2.2.</span> <span class="nav-text">2D</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Grid-generation"><span class="nav-number">2.3.</span> <span class="nav-text">Grid generation</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Download-试用"><span class="nav-number">2.4.</span> <span class="nav-text">Download(试用)</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">szhang</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+本站总访问量 <span id="busuanzi_value_site_pv"></span> &nbsp&nbsp&nbsp
+您是第<span id="busuanzi_value_site_uv"></span>个来到的小伙伴
+
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"hangsz"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      
+      <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js?v=5.1.0"></script>
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("xSG9qhib9q3QrSXUqm8SfRRK-gzGzoHsz", "5SAppRd4YdPJzHbcoLKeOqfw");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  <script type="text/javascript" src="/js/src/love.js"></script>
+  <script type="text/javascript" src="/js/src/particle.js"></script>
+
+</body>
+</html>

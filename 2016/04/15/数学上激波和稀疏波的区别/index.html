@@ -1,0 +1,963 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="CFD,Math," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="版权声明：文章为博主原创，转载请注明出处。     激波和稀疏波，接触间断这些描述都是采用波动方法来求解偏微分方程的方法，比较老，但是对理解流场帮助很大。这些名字听起来很吓人，其实就是个描述现象的名词而已。 先来看看微分形式的Euler方程，先明确一点，微分形式Euler方程不足以描述流场情况，比如流场出现间断（激波，接触间断等），所以额外定义了弱解来弥补这点不足（看来微分形式Euler方程先天不">
+<meta name="keywords" content="CFD,Math">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数学上激波和稀疏波的区别">
+<meta property="og:url" content="http://yoursite.com/2016/04/15/数学上激波和稀疏波的区别/index.html">
+<meta property="og:site_name" content="航哥的小站">
+<meta property="og:description" content="版权声明：文章为博主原创，转载请注明出处。     激波和稀疏波，接触间断这些描述都是采用波动方法来求解偏微分方程的方法，比较老，但是对理解流场帮助很大。这些名字听起来很吓人，其实就是个描述现象的名词而已。 先来看看微分形式的Euler方程，先明确一点，微分形式Euler方程不足以描述流场情况，比如流场出现间断（激波，接触间断等），所以额外定义了弱解来弥补这点不足（看来微分形式Euler方程先天不">
+<meta property="og:image" content="http://yoursite.com/2016/04/15/数学上激波和稀疏波的区别/1.png">
+<meta property="og:image" content="http://yoursite.com/2016/04/15/数学上激波和稀疏波的区别/2.png">
+<meta property="og:image" content="http://yoursite.com/2016/04/15/数学上激波和稀疏波的区别/3.png">
+<meta property="og:image" content="http://yoursite.com/2016/04/15/数学上激波和稀疏波的区别/4.png">
+<meta property="og:updated_time" content="2017-04-12T13:24:23.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数学上激波和稀疏波的区别">
+<meta name="twitter:description" content="版权声明：文章为博主原创，转载请注明出处。     激波和稀疏波，接触间断这些描述都是采用波动方法来求解偏微分方程的方法，比较老，但是对理解流场帮助很大。这些名字听起来很吓人，其实就是个描述现象的名词而已。 先来看看微分形式的Euler方程，先明确一点，微分形式Euler方程不足以描述流场情况，比如流场出现间断（激波，接触间断等），所以额外定义了弱解来弥补这点不足（看来微分形式Euler方程先天不">
+<meta name="twitter:image" content="http://yoursite.com/2016/04/15/数学上激波和稀疏波的区别/1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '6355745518898906000',
+      author: '博主小哥'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/04/15/数学上激波和稀疏波的区别/"/>
+
+
+
+
+
+  <title> 数学上激波和稀疏波的区别 | 航哥的小站 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">航哥的小站</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">航哥的小站</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            专题
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/04/15/数学上激波和稀疏波的区别/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="szhang">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="航哥的小站">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="航哥的小站" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                数学上激波和稀疏波的区别
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表：</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-04-15T12:35:18+08:00">
+                2016-04-15
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              <span class="post-meta-item-text">更新：</span>
+              <time title="更新：" itemprop="dateModified" datetime="2017-04-12T21:24:23+08:00">
+                2017-04-12
+              </time>
+            
+          </span>
+
+		  
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">专题：</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CFD/" itemprop="url" rel="index">
+                    <span itemprop="name">CFD</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <a href="/2016/04/15/数学上激波和稀疏波的区别/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/15/数学上激波和稀疏波的区别/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/04/15/数学上激波和稀疏波的区别/" class="leancloud_visitors" data-flag-title="数学上激波和稀疏波的区别">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数： </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote class="blockquote-center"><p>版权声明：文章为博主原创，转载请注明出处。   </p>
+</blockquote>
+<p>激波和稀疏波，接触间断这些描述都是采用波动方法来求解偏微分方程的方法，比较老，但是对理解流场帮助很大。这些名字听起来很吓人，其实就是个描述现象的名词而已。</p>
+<p>先来看看微分形式的Euler方程，先明确一点，微分形式Euler方程不足以描述流场情况，比如流场出现间断（激波，接触间断等），所以额外定义了弱解来弥补这点不足（看来微分形式Euler方程先天不足），弱解是什么？弱解是在连续处满足微分形式Euler方程，在间断处要满足积分形式的Euler方程，这个定义很自然。</p>
+<hr>
+<h2 id="1-特征形式："><a href="#1-特征形式：" class="headerlink" title="1. 特征形式："></a>1. 特征形式：</h2><p>想要看激波、膨胀波是什么，必须进行把Euler方程转化为特征形式，一维Euler方程：<br>$$ \frac{\partial w}{\partial t} +A\frac{\partial w}{\partial x} =0 $$<br>其中，$ w $可以是守恒变量也可以是原始变量，特征值是一样的。相似变换：$\Lambda =Q^{-1}AQ$ ，令 $ v=Qw $，那么<br>$$ \frac{\partial v}{\partial t} +\Lambda \frac{\partial v}{\partial x} =0,\Lambda =diag(\lambda <em>{1},\lambda </em>{2} ,\lambda _{3}  ) $$</p>
+<p>把上式写成单方程形式：<br>$$ \frac{\partial v<em>{i} }{\partial t} +\lambda </em>{i} \frac{\partial v<em>{i} }{\partial x} =0  \Rightarrow dv</em>{i} =0 ,if    \frac{dx}{dt}=\lambda <em>{i} $$<br>这是相容关系，$v</em>{i}$就是所谓的特征变量；特征值也即波的传播速度为：$\lambda <em>{1}=u-c,\lambda </em>{2}=u,\lambda _{3}=u+c$。</p>
+<blockquote>
+<p>到这里先停一下，直观的来看看这三道波，$\lambda <em>{2}=u$，$u$是流场速度，说明这道波携带的信息$ dv</em>{i} =0$是跟着流体微团一起运动的，Euler方程针对无粘流体，流体微团运动过程是等熵的，所以$\lambda <em>{2}$叫做熵波；$\lambda </em>{1,3}=u\mp c$，这两道波是相对于流体微团本身以声速传播的波，所以叫声波，这两道波携带的信息也没有什么物理意义。</p>
+</blockquote>
+<hr>
+<h2 id="2-Euler方程的间断"><a href="#2-Euler方程的间断" class="headerlink" title="2.Euler方程的间断"></a>2.Euler方程的间断</h2><p>Euler方程描述的流场中会出现三种间断：</p>
+<ul>
+<li>膨胀波：在波头和波尾，变量的一阶导数不连续</li>
+<li>激波：流场变量跨越激波不连续</li>
+<li>接触间断：间断两侧密度不连续，压力和速度都连续<br>接触间断只能由$\lambda <em>{2}=u$这道波产生，膨胀波和激波只能由$\lambda </em>{1,3}=u\mp c$这两道波产生。</li>
+</ul>
+<hr>
+<h3 id="膨胀波："><a href="#膨胀波：" class="headerlink" title="膨胀波："></a>膨胀波：</h3><p>对于一维情况，特征值沿 x正向单调递增。</p>
+<ul>
+<li>数学描述：以$\lambda _{3}=u+c$为例，$u(x,t)+c(x,t)\leq  u(y,t)+c(y,t) x&lt;y$</li>
+</ul>
+<img src="/2016/04/15/数学上激波和稀疏波的区别/1.png" alt="1.png" title="">
+<blockquote>
+<p>如图，同一时刻任意画一条直线，其特征值沿着x轴都是递增的，反应到图上就是斜率（特征值的倒数）沿着x轴是递减的。<br>由于膨胀波不出现变量的不连续，所以不需要采用弱解理论，微分形式的Euler方程就可以涵盖它。</p>
+</blockquote>
+<p><strong>直观理解:</strong> 波是往右传的，右边的波跑的快，左边的追不上，所以趋势是把波形（初始时刻，沿x轴变量形成的形状）给拉宽，但是不会破坏这形状，看图：<br><img src="/2016/04/15/数学上激波和稀疏波的区别/2.png" alt="2.png" title=""></p>
+<blockquote>
+<p>如图，最下的图是初始波形，中间是膨胀波特征值的图形表示，上边是t时刻波形。<br>注意虚线，可以看到波形不变，只是被拉宽了。</p>
+</blockquote>
+<hr>
+<h3 id="压缩波和激波"><a href="#压缩波和激波" class="headerlink" title="压缩波和激波"></a>压缩波和激波</h3><p>对于一维情况，特征值沿x轴正向递减。</p>
+<ul>
+<li>数学描述：以$\lambda _{3}=u+c$为例，$u(x,t)+c(x,t)\geq  u(y,t)+c(y,t) x&lt;y$</li>
+</ul>
+<img src="/2016/04/15/数学上激波和稀疏波的区别/3.png" alt="3.png" title="">
+<blockquote>
+<p>如图，你可以认为压缩波是图中细的线（还没有成功汇聚），激波是粗的（成功汇聚）。<br>按理说，压缩波和膨胀波是一对好基友，这么怎么又冒出个激波。这是因为膨胀波不管怎么膨胀，大家都相安无事，携带着自己的信息该怎么传播就怎么传播。压缩波就不行了，早晚得汇聚，这一汇聚就变样了，汇聚后保留谁的信息，以谁的特征速度来传播？这个就难产了，最后把汇聚的这个东西叫激波吧，以激波速度传播，携带什么信息我也不知道，就知道过了激波变量不连续了。</p>
+</blockquote>
+<p>由于激波导致流场不连续，微分方程不好使了，所以必须采用弱解理论，那就用积分形式的Euler方程。描述激波前后变量方法挺多的，一般采用通量的方法（采用流场变量也可以）：<br>$f<em>{R} -f</em>{L} =s\cdot (v<em>{R} -v</em>{L} ) $—–Rankine-Hugoniot（兰金-许贡钮公式）；<br>激波速度满足，  $u<em>{L}+c</em>{L}  \leq s\leq u<em>{R}+c</em>{R} $  —-熵条件（热二），过激波熵增。</p>
+<p><strong>直观理解：</strong>激波是特性汇聚的地方，只要一汇聚，传播好好的特征线就断了，相应的携带的特征信息也不知道变成啥了。激波就跟黑洞一样，不停的吸收旁边传过来的压缩波，把它的信息给吞掉，所以激波无法维持初始波形，趋势是抹平初始波形：<br><img src="/2016/04/15/数学上激波和稀疏波的区别/4.png" alt="4.png" title=""></p>
+<blockquote>
+<p>如图，在t时刻波形跟初始波形已经不同了。注意虚线，可以看到初始时刻激波左右的虚线都被吸到激波里了。</p>
+</blockquote>
+<p><strong>总结：</strong> 膨胀波和激波是 采用波方法来求解Euler方程时产生的名词，是由于初始时刻特征值分布不同，导致后续流场发展而出现的不同现象。</p>
+<blockquote class="blockquote-center"><p>做了点微小的工作，谢谢大家。   </p>
+</blockquote>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CFD/" rel="tag"># CFD</a>
+          
+            <a href="/tags/Math/" rel="tag"># Math</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/04/22/Flux-Vector-Splitting（FVS）-方法与-Flux-Difference-Splitting（FDS）的区别/" rel="next" title="Flux Vector Splitting（FVS） 方法与 Flux Difference Splitting（FDS）的区别">
+                <i class="fa fa-chevron-left"></i> Flux Vector Splitting（FVS） 方法与 Flux Difference Splitting（FDS）的区别
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/04/10/The-development-of-Convection-Term-Discretisation/" rel="prev" title="The Development of Convection Term Discretisation">
+                The Development of Convection Term Discretisation <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/04/15/数学上激波和稀疏波的区别/"
+           data-title="数学上激波和稀疏波的区别" data-url="http://yoursite.com/2016/04/15/数学上激波和稀疏波的区别/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="szhang" />
+          <p class="site-author-name" itemprop="name">szhang</p>
+          <p class="site-description motion-element" itemprop="description">我想要自由，像呼吸一样渴望。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">28</span>
+              <span class="site-state-item-name">文章</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">专题</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/hangsz" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/HANGZS" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              相关链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://zhuanlan.zhihu.com/solver?author=HANGZS" title="流场求解器初探" target="_blank">流场求解器初探</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://zhuanlan.zhihu.com/c_33038803?author=HANGZS" title="流体探秘" target="_blank">流体探秘</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-特征形式："><span class="nav-number">1.</span> <span class="nav-text">1. 特征形式：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Euler方程的间断"><span class="nav-number">2.</span> <span class="nav-text">2.Euler方程的间断</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#膨胀波："><span class="nav-number">2.1.</span> <span class="nav-text">膨胀波：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#压缩波和激波"><span class="nav-number">2.2.</span> <span class="nav-text">压缩波和激波</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">szhang</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+本站总访问量 <span id="busuanzi_value_site_pv"></span> &nbsp&nbsp&nbsp
+您是第<span id="busuanzi_value_site_uv"></span>个来到的小伙伴
+
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"hangsz"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      
+      <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js?v=5.1.0"></script>
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("xSG9qhib9q3QrSXUqm8SfRRK-gzGzoHsz", "5SAppRd4YdPJzHbcoLKeOqfw");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  <script type="text/javascript" src="/js/src/love.js"></script>
+  <script type="text/javascript" src="/js/src/particle.js"></script>
+
+</body>
+</html>

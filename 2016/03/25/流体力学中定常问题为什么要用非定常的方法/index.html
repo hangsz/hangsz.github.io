@@ -1,0 +1,987 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="CFD,Math,PDE," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="版权声明：文章为博主原创，转载请注明出处。    貌似大家都在讨论NS方程是什么类型，数值求解需要用什么格式，但是系统的分类很少见。今天我就来给流体力学方程来分个类，讲清楚为什么要采用非定常方法。  数学基础 二阶偏微分方程：$$ \sum{j=1}^{N}\sum{k=1}^{N}A{jk} \frac{\partial ^{2}\phi  }{\partial x{j} \partial x_">
+<meta name="keywords" content="CFD,Math,PDE">
+<meta property="og:type" content="article">
+<meta property="og:title" content="流体力学中定常问题为什么要用非定常的方法">
+<meta property="og:url" content="http://yoursite.com/2016/03/25/流体力学中定常问题为什么要用非定常的方法/index.html">
+<meta property="og:site_name" content="航哥的小站">
+<meta property="og:description" content="版权声明：文章为博主原创，转载请注明出处。    貌似大家都在讨论NS方程是什么类型，数值求解需要用什么格式，但是系统的分类很少见。今天我就来给流体力学方程来分个类，讲清楚为什么要采用非定常方法。  数学基础 二阶偏微分方程：$$ \sum{j=1}^{N}\sum{k=1}^{N}A{jk} \frac{\partial ^{2}\phi  }{\partial x{j} \partial x_">
+<meta property="og:updated_time" content="2017-04-12T13:24:23.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="流体力学中定常问题为什么要用非定常的方法">
+<meta name="twitter:description" content="版权声明：文章为博主原创，转载请注明出处。    貌似大家都在讨论NS方程是什么类型，数值求解需要用什么格式，但是系统的分类很少见。今天我就来给流体力学方程来分个类，讲清楚为什么要采用非定常方法。  数学基础 二阶偏微分方程：$$ \sum{j=1}^{N}\sum{k=1}^{N}A{jk} \frac{\partial ^{2}\phi  }{\partial x{j} \partial x_">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '6355745518898906000',
+      author: '博主小哥'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/03/25/流体力学中定常问题为什么要用非定常的方法/"/>
+
+
+
+
+
+  <title> 流体力学中定常问题为什么要用非定常的方法 | 航哥的小站 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">航哥的小站</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">航哥的小站</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            专题
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/03/25/流体力学中定常问题为什么要用非定常的方法/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="szhang">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="航哥的小站">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="航哥的小站" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                流体力学中定常问题为什么要用非定常的方法
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表：</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-03-25T19:16:54+08:00">
+                2016-03-25
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              <span class="post-meta-item-text">更新：</span>
+              <time title="更新：" itemprop="dateModified" datetime="2017-04-12T21:24:23+08:00">
+                2017-04-12
+              </time>
+            
+          </span>
+
+		  
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">专题：</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CFD/" itemprop="url" rel="index">
+                    <span itemprop="name">CFD</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <a href="/2016/03/25/流体力学中定常问题为什么要用非定常的方法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/25/流体力学中定常问题为什么要用非定常的方法/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/03/25/流体力学中定常问题为什么要用非定常的方法/" class="leancloud_visitors" data-flag-title="流体力学中定常问题为什么要用非定常的方法">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数： </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote class="blockquote-center"><p>版权声明：文章为博主原创，转载请注明出处。  </p>
+</blockquote>
+<p>貌似大家都在讨论NS方程是什么类型，数值求解需要用什么格式，但是系统的分类很少见。<br>今天我就来给流体力学方程来分个类，讲清楚为什么要采用非定常方法。</p>
+<hr>
+<h3 id="数学基础"><a href="#数学基础" class="headerlink" title="数学基础"></a>数学基础</h3><ul>
+<li>二阶偏微分方程：<br>$$ \sum<em>{j=1}^{N}\sum</em>{k=1}^{N}A<em>{jk} \frac{\partial ^{2}\phi  }{\partial x</em>{j} \partial x_{k}   } +H=0 $$</li>
+<li><p>特征多项式：<br>$$ det(A_{jk} -\lambda I)=0 $$</p>
+</li>
+<li><p>分类：</p>
+<blockquote>
+<ul>
+<li>任何一个特征值为零——退化型，抛物型；</li>
+<li>所有特征值都不为零， 且符号相同——有定型（A矩阵正定或负定）椭圆型；</li>
+<li>所有特征值都不为零，但有且只有一个符号奇葩——亏格为一，双曲型。</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h3 id="二阶PDE方程归类"><a href="#二阶PDE方程归类" class="headerlink" title="二阶PDE方程归类"></a>二阶PDE方程归类</h3><p>二阶偏微分方程控制的物理问题，可以分为两类：</p>
+<blockquote>
+<ol>
+<li>平衡问题——椭圆形方程</li>
+<li>发展问题——抛物型方程和双曲型方程</li>
+</ol>
+</blockquote>
+<h4 id="1-平衡问题——大多数的定常问题"><a href="#1-平衡问题——大多数的定常问题" class="headerlink" title="1. 平衡问题——大多数的定常问题"></a>1. 平衡问题——大多数的定常问题</h4><ul>
+<li>椭圆形方程，如 Laplace方程：<br>$$  \frac{\partial ^{2}\phi  }{\partial x^{2} } +\frac{\partial ^{2}\phi  }{\partial y^{2} }=0$$</li>
+<li>定解条件： 所有边界条件。</li>
+<li>物理特性： 任意一点扰动都可以传遍整个物理域，所以即使边界条件间断，内场最终也是光滑的。</li>
+<li>数值格式：众所周知，数值格式必须和物理特性相合，所以每一点的信息更新需要考虑相邻所有点对其的影响。</li>
+</ul>
+<hr>
+<h4 id="2-发展问题——所有非定常问题，波动问题等"><a href="#2-发展问题——所有非定常问题，波动问题等" class="headerlink" title="2. 发展问题——所有非定常问题，波动问题等"></a>2. 发展问题——所有非定常问题，波动问题等</h4><ul>
+<li>抛物型方程，如扩散方程：<br>$$ \frac{\partial \phi  }{\partial t } =\alpha \frac{\partial ^{2}\phi  }{\partial x^{2} }$$</li>
+<li>定解条件：初值和边界条件（需要具体问题具体分析，考虑推进坐标是什么）。</li>
+<li>物理特性：扰动只沿 推进方向 以特定速度传播 传播，但物理现象中带有巨量的耗散，所以即使初值间断，最终的流场分布始终是光滑的。</li>
+<li>数值格式：考虑 迎风性。</li>
+</ul>
+<hr>
+<ul>
+<li>双曲型方程，如波动方程：<br>$$ \frac{\partial ^{2}\phi  }{\partial t^{2} } =c^{2} \frac{\partial ^{2}\phi  }{\partial x^{2} }$$</li>
+<li>定解条件：初值和边界条件（需要具体问题具体分析）。</li>
+<li>物理特性：扰动只沿 特定方向 以特定速度 传播，但是物理现象中可能只有很小的耗散，所以即使初值连续，最终的流场分布也可能出现间断（严谨表述见评论区）。</li>
+<li>数值格式：迎风性，间断。</li>
+</ul>
+<hr>
+<h4 id="3-小结"><a href="#3-小结" class="headerlink" title="3. 小结"></a>3. 小结</h4><blockquote>
+<p>这样看来， 双曲型方程最坑爹，信息传的最慢还问题多，俗气点说：懒驴上磨屎尿多。</p>
+</blockquote>
+<hr>
+<h3 id="Euler方程归类"><a href="#Euler方程归类" class="headerlink" title="Euler方程归类"></a>Euler方程归类</h3><p> 由于没有扩散项，所以Euler方程不会是抛物型方程（没有其他简化）。 </p>
+<ol>
+<li>非定常： 有时间项，双曲型。</li>
+<li>定常： </li>
+</ol>
+<ul>
+<li>流场全部超声速：流速比声速快，扰动（以声速传播）只能传播到下游， 双曲型。</li>
+<li>流场全部亚声速：流速慢于声速，扰动可以传播上下游，椭圆型。不可压情况声速无穷大，所以更是椭圆型。</li>
+<li>超声速和亚声速混合：双曲型和椭圆型混合，由于方程性质不同，所以很难构造统一格式，任何想要在两个区域获得一致有效解的行为都是耍流氓。</li>
+</ul>
+<hr>
+<h3 id="NS方程归类"><a href="#NS方程归类" class="headerlink" title="NS方程归类"></a>NS方程归类</h3><p>粘性和热扩散都考虑。</p>
+<ol>
+<li>非定常：由于有了时间项，且有耗散，所以是抛物型。</li>
+<li>定常：要不要思考一下，区分一下超声速或者亚声速？<br>不需要，因为它是混合型。至于NS方程为什么这样归类，你要问我为什么，我也不能说一句无可奉告，让你们不高兴。那我只能好好回答你了，答案是 我也不知道。<br>安德森给了一个解释：NS方程抛物型性质来自于速度和内能的时间导数，椭圆形性质来自于粘性，粘性提供了向上游反馈的机制。关于粘性向上游反馈的机制，我是这样理解的：由于粘性的存在，所以流场中一定会有边界层，边界层亚声速区域压力波可以网往上游传播，提供椭圆型特性。</li>
+</ol>
+<hr>
+<h3 id="大结"><a href="#大结" class="headerlink" title="大结"></a>大结</h3><ul>
+<li>首先明确不是一定要用非定常来求解，比如定常全部亚声速下Euler方程 就是椭圆型方程，可以用适合椭圆型方程的数值格式来求解，估计更简单。</li>
+<li>采用非定常方式来求解定常问题的一定属于： 亚声速和超声速混合的Euler方程 以及 定常NS方程。<br>添加时间项，统一化为 发展型 问题，这样构造适合全流场的数值格式简单省事。</li>
+</ul>
+<blockquote class="blockquote-center"><p>做了点微小的工作，谢谢大家。   </p>
+</blockquote>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CFD/" rel="tag"># CFD</a>
+          
+            <a href="/tags/Math/" rel="tag"># Math</a>
+          
+            <a href="/tags/PDE/" rel="tag"># PDE</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/03/26/win下配置OpenGL环境（sb6）/" rel="next" title="win下配置OpenGL环境（sb6）">
+                <i class="fa fa-chevron-left"></i> win下配置OpenGL环境（sb6）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/11/26/《计算流体力学-李新亮》笔记（7）-湍流及转捩/" rel="prev" title="《计算流体力学-李新亮》笔记(7)-湍流及转捩">
+                《计算流体力学-李新亮》笔记(7)-湍流及转捩 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/03/25/流体力学中定常问题为什么要用非定常的方法/"
+           data-title="流体力学中定常问题为什么要用非定常的方法" data-url="http://yoursite.com/2016/03/25/流体力学中定常问题为什么要用非定常的方法/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="szhang" />
+          <p class="site-author-name" itemprop="name">szhang</p>
+          <p class="site-description motion-element" itemprop="description">我想要自由，像呼吸一样渴望。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">28</span>
+              <span class="site-state-item-name">文章</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">专题</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/hangsz" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/HANGZS" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              相关链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://zhuanlan.zhihu.com/solver?author=HANGZS" title="流场求解器初探" target="_blank">流场求解器初探</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://zhuanlan.zhihu.com/c_33038803?author=HANGZS" title="流体探秘" target="_blank">流体探秘</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#数学基础"><span class="nav-number">1.</span> <span class="nav-text">数学基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二阶PDE方程归类"><span class="nav-number">2.</span> <span class="nav-text">二阶PDE方程归类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-平衡问题——大多数的定常问题"><span class="nav-number">2.1.</span> <span class="nav-text">1. 平衡问题——大多数的定常问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-发展问题——所有非定常问题，波动问题等"><span class="nav-number">2.2.</span> <span class="nav-text">2. 发展问题——所有非定常问题，波动问题等</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-小结"><span class="nav-number">2.3.</span> <span class="nav-text">3. 小结</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Euler方程归类"><span class="nav-number">3.</span> <span class="nav-text">Euler方程归类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NS方程归类"><span class="nav-number">4.</span> <span class="nav-text">NS方程归类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#大结"><span class="nav-number">5.</span> <span class="nav-text">大结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">szhang</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+本站总访问量 <span id="busuanzi_value_site_pv"></span> &nbsp&nbsp&nbsp
+您是第<span id="busuanzi_value_site_uv"></span>个来到的小伙伴
+
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"hangsz"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      
+      <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js?v=5.1.0"></script>
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("xSG9qhib9q3QrSXUqm8SfRRK-gzGzoHsz", "5SAppRd4YdPJzHbcoLKeOqfw");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  <script type="text/javascript" src="/js/src/love.js"></script>
+  <script type="text/javascript" src="/js/src/particle.js"></script>
+
+</body>
+</html>
