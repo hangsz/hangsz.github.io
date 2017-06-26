@@ -1,0 +1,882 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/Elon Musk.jpg?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="版权声明：文章为博主原创，转载请注明出处。    我花了多少个晚上，Titanic成绩只提高了0.015。一开始随便选了几个数据全的特征，随便选个分类模型训练，提交0.75598。开局喜人，内心开始膨胀，我想我得前进点、最好能榜上有名。于是我做了相关性可视化分析：12345678910111213141516171819202122232425262728293031323334353637383">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="只提高了0.015">
+<meta property="og:url" content="http://yoursite.com/2017/06/26/只提高了0-015/index.html">
+<meta property="og:site_name" content="航哥的小站">
+<meta property="og:description" content="版权声明：文章为博主原创，转载请注明出处。    我花了多少个晚上，Titanic成绩只提高了0.015。一开始随便选了几个数据全的特征，随便选个分类模型训练，提交0.75598。开局喜人，内心开始膨胀，我想我得前进点、最好能榜上有名。于是我做了相关性可视化分析：12345678910111213141516171819202122232425262728293031323334353637383">
+<meta property="og:updated_time" content="2017-06-26T14:39:09.089Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="只提高了0.015">
+<meta name="twitter:description" content="版权声明：文章为博主原创，转载请注明出处。    我花了多少个晚上，Titanic成绩只提高了0.015。一开始随便选了几个数据全的特征，随便选个分类模型训练，提交0.75598。开局喜人，内心开始膨胀，我想我得前进点、最好能榜上有名。于是我做了相关性可视化分析：12345678910111213141516171819202122232425262728293031323334353637383">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '6355745518898906000',
+      author: '博主小哥'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/06/26/只提高了0-015/"/>
+
+
+
+
+
+  <title> 只提高了0.015 | 航哥的小站 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">航哥的小站</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">航哥的小站</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            专题
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/26/只提高了0-015/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="szhang">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="航哥的小站">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="航哥的小站" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                只提高了0.015
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表：</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-26T22:05:32+08:00">
+                2017-06-26
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              <span class="post-meta-item-text">更新：</span>
+              <time title="更新：" itemprop="dateModified" datetime="2017-06-26T22:39:09+08:00">
+                2017-06-26
+              </time>
+            
+          </span>
+
+		  
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <a href="/2017/06/26/只提高了0-015/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/06/26/只提高了0-015/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/06/26/只提高了0-015/" class="leancloud_visitors" data-flag-title="只提高了0.015">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数： </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote class="blockquote-center"><p>版权声明：文章为博主原创，转载请注明出处。  </p>
+</blockquote>
+<p><strong>我花了多少个晚上，Titanic成绩只提高了0.015。</strong><br>一开始随便选了几个数据全的特征，随便选个分类模型训练，提交0.75598。<br>开局喜人，内心开始膨胀，我想我得前进点、最好能榜上有名。<br>于是我做了相关性可视化分析：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#  correlate.py</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line"><span class="keyword">from</span> pandas <span class="keyword">import</span> DataFrame</div><div class="line"><span class="keyword">import</span> math</div><div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">Pclass</span><span class="params">(data)</span>:</span></div><div class="line">    fig,ax = plt.subplots(<span class="number">1</span>, <span class="number">2</span>)</div><div class="line"><span class="comment"># 1. focus on Y</span></div><div class="line">    m1 = data[[<span class="string">'Pclass'</span>,<span class="string">'Survived'</span>]].groupby(<span class="string">'Survived'</span>).mean()</div><div class="line">    m1.plot(ax = ax[<span class="number">0</span>], kind=<span class="string">'bar'</span>)</div><div class="line">    </div><div class="line"><span class="comment"># 2. focus on feature</span></div><div class="line">    m2 = data[[<span class="string">'Pclass'</span>,<span class="string">'Survived'</span>]].groupby(<span class="string">'Pclass'</span>).mean()</div><div class="line">    m2.plot(ax = ax[<span class="number">1</span>], kind=<span class="string">'bar'</span>)</div><div class="line">    plt.show()</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">Sex</span><span class="params">(data)</span>:</span></div><div class="line">    fig,ax = plt.subplots(<span class="number">1</span>,<span class="number">2</span>)</div><div class="line">    <span class="comment"># 1. focus on Y</span></div><div class="line">    df = data[[<span class="string">'Survived'</span>,<span class="string">'Sex'</span>]]</div><div class="line">    df[<span class="string">'Sex'</span>].replace([<span class="string">'male'</span>,<span class="string">'female'</span>],[<span class="number">0</span>,<span class="number">1</span>],inplace = <span class="keyword">True</span>)</div><div class="line">    m1 = df.groupby(<span class="string">'Survived'</span>).mean()</div><div class="line">    m1.plot(ax = ax[<span class="number">0</span>], kind=<span class="string">'bar'</span>)</div><div class="line">    <span class="comment"># 2. focus on feature</span></div><div class="line">    m2 = df.groupby(<span class="string">'Sex'</span>).mean()</div><div class="line">    m2.plot(ax = ax[<span class="number">1</span>], kind=<span class="string">'bar'</span>)</div><div class="line">    plt.show()</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">SibSp</span><span class="params">(data)</span>:</span></div><div class="line">    fig,ax = plt.subplots(<span class="number">1</span>,<span class="number">2</span>)</div><div class="line">    <span class="comment"># 1. focus on Y</span></div><div class="line">    df = data[[<span class="string">'Survived'</span>,<span class="string">'SibSp'</span>]]</div><div class="line">    m1 = df.groupby(<span class="string">'Survived'</span>).mean()</div><div class="line">    m1.plot(ax = ax[<span class="number">0</span>], kind=<span class="string">'bar'</span>)</div><div class="line">    <span class="comment"># 2. focus on feature</span></div><div class="line">    m2 = df.groupby(<span class="string">'SibSp'</span>).mean()</div><div class="line">    m2.plot(ax = ax[<span class="number">1</span>], kind=<span class="string">'bar'</span>)</div><div class="line">    plt.show()</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">Parch</span><span class="params">(data)</span>:</span></div><div class="line">    fig,ax = plt.subplots(<span class="number">1</span>,<span class="number">2</span>)</div><div class="line">    <span class="comment"># 1. focus on Y</span></div><div class="line">    df = data[[<span class="string">'Survived'</span>,<span class="string">'Parch'</span>]]</div><div class="line">    m1 = df.groupby(<span class="string">'Survived'</span>).mean()</div><div class="line">    m1.plot(ax = ax[<span class="number">0</span>], kind=<span class="string">'bar'</span>)</div><div class="line">    </div><div class="line">    <span class="comment"># 2. focus on feature</span></div><div class="line">    m2 = df.groupby(<span class="string">'Parch'</span>).mean()</div><div class="line">    m2.plot(ax = ax[<span class="number">1</span>], kind=<span class="string">'bar'</span>)</div><div class="line">    plt.show()</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">Fare</span><span class="params">(data)</span>:</span></div><div class="line">    fig,ax = plt.subplots(<span class="number">1</span>,<span class="number">1</span>)</div><div class="line">    <span class="comment"># 1. focus on Y</span></div><div class="line">    df = data[[<span class="string">'Survived'</span>,<span class="string">'Fare'</span>]]</div><div class="line">    m1 = df.groupby(<span class="string">'Survived'</span>).mean()</div><div class="line">    m1.plot(ax = ax, kind=<span class="string">'bar'</span>)</div><div class="line">    plt.show()</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">Age</span><span class="params">(data)</span>:</span></div><div class="line">    fig,ax = plt.subplots(<span class="number">1</span>,<span class="number">1</span>)</div><div class="line">    </div><div class="line">    df = data[[<span class="string">'Survived'</span>,<span class="string">'Age'</span>]]</div><div class="line">    df[<span class="string">'Age'</span>] = df[<span class="string">'Age'</span>].map(<span class="keyword">lambda</span> x: int(math.floor(x))/<span class="number">10</span>*<span class="number">10</span>+<span class="number">5</span>,na_action=<span class="string">'ignore'</span>)</div><div class="line"></div><div class="line">    s1 = df[df[<span class="string">'Survived'</span>]==<span class="number">0</span>].groupby(<span class="string">'Age'</span>).count()</div><div class="line">    s2 = df[df[<span class="string">'Survived'</span>]==<span class="number">1</span>].groupby(<span class="string">'Age'</span>).count()</div><div class="line">    s3 = pd.concat([s1,s2], axis =<span class="number">1</span>)</div><div class="line">    s3.columns = [<span class="string">'unsurvived'</span>,<span class="string">'survived'</span>]</div><div class="line">    </div><div class="line">    s3.plot(ax=ax,kind=<span class="string">'bar'</span>, stacked=<span class="keyword">False</span>)</div><div class="line">    </div><div class="line">    plt.show()</div><div class="line">    </div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">Embarked</span><span class="params">(data)</span>:</span></div><div class="line">    fig,ax = plt.subplots(<span class="number">1</span>,<span class="number">1</span>)</div><div class="line">    df = data[[<span class="string">'Survived'</span>,<span class="string">'Embarked'</span>]]</div><div class="line">    </div><div class="line">    m2 = df.groupby(<span class="string">'Embarked'</span>).mean()</div><div class="line">    m2.plot(ax = ax, kind=<span class="string">'bar'</span>)</div><div class="line">    plt.show()</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">Name</span><span class="params">(data)</span>:</span></div><div class="line">    fig,ax = plt.subplots(<span class="number">1</span>,<span class="number">2</span>)</div><div class="line">    name = data[<span class="string">'Name'</span>].str.extract(<span class="string">'([A-Za-z]+)\.'</span>, expand=<span class="keyword">False</span>)</div><div class="line">    df = DataFrame(&#123;<span class="string">'Survived'</span>:data[<span class="string">'Survived'</span>], <span class="string">'Name'</span>: name&#125;)</div><div class="line">   </div><div class="line">    m1 = df.groupby(<span class="string">'Name'</span>).count()</div><div class="line">    m2 = df.groupby(<span class="string">'Name'</span>).mean()</div><div class="line">    m1.plot(ax = ax[<span class="number">0</span>], kind=<span class="string">'bar'</span>)</div><div class="line">    m2.plot(ax = ax[<span class="number">1</span>], kind=<span class="string">'bar'</span>)</div><div class="line">    plt.show()</div><div class="line">    </div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">correlate</span><span class="params">(data)</span>:</span></div><div class="line">    funs = [Pclass, Sex, SibSp, Parch, Fare,  Age, Embarked, Name]</div><div class="line"></div><div class="line">    <span class="keyword">for</span> fun <span class="keyword">in</span> funs:</div><div class="line">        fun(data)</div></pre></td></tr></table></figure></p>
+<p>然后，根据相关性我想了各种办法进行了缺失数据清洗和填充：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#  complete.py</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line"><span class="keyword">from</span> pandas <span class="keyword">import</span> DataFrame</div><div class="line"><span class="keyword">import</span> math</div><div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">isnull</span><span class="params">(data)</span>:</span></div><div class="line">    <span class="keyword">for</span> column <span class="keyword">in</span> data.columns:</div><div class="line">        <span class="keyword">if</span> len(data[column][data[column].isnull()])&gt;<span class="number">0</span>:</div><div class="line">            <span class="keyword">print</span> column  </div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">Pclass</span><span class="params">(data)</span>:</span></div><div class="line">    data[<span class="string">'Pclass'</span>][data[<span class="string">'Pclass'</span>].isnull()]  </div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">Sex</span><span class="params">(data)</span>:</span></div><div class="line">    data[<span class="string">'Sex'</span>].replace([<span class="string">'male'</span>,<span class="string">'female'</span>],[<span class="number">0</span>,<span class="number">1</span>], inplace = <span class="keyword">True</span>)   </div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">SibSp</span><span class="params">(data)</span>:</span></div><div class="line">    <span class="keyword">pass</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">Parch</span><span class="params">(data)</span>:</span></div><div class="line">    <span class="keyword">pass</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">Fare</span><span class="params">(data)</span>:</span></div><div class="line">    data[<span class="string">'Fare'</span>].fillna( data[<span class="string">'Fare'</span>].dropna().median(),inplace = <span class="keyword">True</span>)</div><div class="line">    <span class="comment"># categories = pd.qcut(data['Fare'],4).unique()</span></div><div class="line"></div><div class="line">    data.loc[ data[<span class="string">'Fare'</span>] &lt;= <span class="number">7.91</span>, <span class="string">'Fare'</span>] = <span class="number">0</span></div><div class="line">    data.loc[(data[<span class="string">'Fare'</span>]&gt; <span class="number">7.91</span>) &amp; (data[<span class="string">'Fare'</span>]&lt;= <span class="number">14.454</span>), <span class="string">'Fare'</span>] = <span class="number">1</span></div><div class="line">    data.loc[(data[<span class="string">'Fare'</span>] &gt; <span class="number">14.454</span>) &amp; (data[<span class="string">'Fare'</span>]&lt;= <span class="number">31</span>), <span class="string">'Fare'</span>] = <span class="number">2</span></div><div class="line">    data.loc[ data[<span class="string">'Fare'</span>] &gt; <span class="number">31</span>, <span class="string">'Fare'</span>] = <span class="number">3</span></div><div class="line">    data[<span class="string">'Fare'</span>] = data[<span class="string">'Fare'</span>].astype(int)</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">Age</span><span class="params">(data)</span>:</span></div><div class="line">    family = data[<span class="string">'SibSp'</span>] + data[<span class="string">'Parch'</span>]</div><div class="line">    df = DataFrame(&#123;<span class="string">'family'</span>: family, <span class="string">'Age'</span>:data[<span class="string">'Age'</span>]&#125;)</div><div class="line">    m1 = df.groupby(<span class="string">'family'</span>).mean()</div><div class="line">    m1.fillna(m1[<span class="string">'Age'</span>].mean(), inplace = <span class="keyword">True</span>)</div><div class="line"></div><div class="line">    df[<span class="string">'Age'</span>][df[<span class="string">'Age'</span>].isnull()] = [ m1.loc[x].values[<span class="number">0</span>] <span class="keyword">for</span> x <span class="keyword">in</span> df[<span class="string">'family'</span>][df[<span class="string">'Age'</span>].isnull()] ] </div><div class="line">    data[<span class="string">'Age'</span>] = df[<span class="string">'Age'</span>] </div><div class="line">    data[<span class="string">'Age'</span>] = data[<span class="string">'Age'</span>].map(<span class="keyword">lambda</span> x: int(math.floor(x))/<span class="number">10</span>*<span class="number">10</span>+<span class="number">5</span>,na_action=<span class="string">'ignore'</span>)</div><div class="line">    </div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">Embarked</span><span class="params">(data)</span>:</span></div><div class="line">    </div><div class="line">    data[<span class="string">'Embarked'</span>].fillna( data[<span class="string">'Embarked'</span>].dropna().mode()[<span class="number">0</span>],inplace = <span class="keyword">True</span>)</div><div class="line">    data[<span class="string">'Embarked'</span>].replace([<span class="string">'S'</span>,<span class="string">'C'</span>,<span class="string">'Q'</span>], [<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>],inplace = <span class="keyword">True</span>)</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">Name</span><span class="params">(data)</span>:</span></div><div class="line">    name = data[<span class="string">'Name'</span>].str.extract(<span class="string">'([A-Za-z]+)\.'</span>, expand=<span class="keyword">False</span>)</div><div class="line">    name.replace(name.value_counts().iloc[<span class="number">4</span>:].index, <span class="string">'Rare'</span>, inplace = <span class="keyword">True</span>)</div><div class="line">    name.replace(name.value_counts().index, range(<span class="number">5</span>), inplace = <span class="keyword">True</span>)</div><div class="line">    data[<span class="string">'Name'</span>] = name</div><div class="line">       </div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">complete</span><span class="params">(data)</span>:</span></div><div class="line">    funs = [Pclass, Sex, SibSp, Parch, Fare,  Age, Embarked, Name]</div><div class="line"></div><div class="line">    <span class="keyword">for</span> fun <span class="keyword">in</span> funs:</div><div class="line">        fun(data)</div></pre></td></tr></table></figure></p>
+<p>心想，这次肯定有一个不错的结果，结果0.76555，提高了0.01， 郁闷。<br>我不能这么容易放弃，于是我决定用logistic regression看看特征相关性：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Titanic.py 上部分</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np </div><div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div><div class="line"><span class="keyword">from</span> pandas <span class="keyword">import</span> Series, DataFrame</div><div class="line"><span class="keyword">import</span> math</div><div class="line"></div><div class="line">trainData = pd.read_csv(<span class="string">'train.csv'</span>, header = <span class="number">0</span>, index_col = <span class="number">0</span>)</div><div class="line"><span class="comment">#trainData.info()</span></div><div class="line"></div><div class="line"><span class="comment">#1. choose suitable features</span></div><div class="line"><span class="comment"># import correlate</span></div><div class="line"><span class="comment"># reload(correlate)</span></div><div class="line"><span class="comment"># correlate.correlate(trainData)</span></div><div class="line"></div><div class="line"><span class="comment">#2. complete or correct features </span></div><div class="line"><span class="keyword">import</span> complete</div><div class="line">reload(complete)</div><div class="line">complete.complete(trainData)</div><div class="line"></div><div class="line"><span class="comment">#3. Feature Select and Model Select </span></div><div class="line">featureList = [<span class="string">'Pclass'</span>, <span class="string">'Sex'</span>, <span class="string">'SibSp'</span>, <span class="string">'Parch'</span>, <span class="string">'Fare'</span>,  <span class="string">'Age'</span>, <span class="string">'Embarked'</span>, <span class="string">'Name'</span>]</div><div class="line">trainX = trainData[featureList].values </div><div class="line">trainY = trainData[<span class="string">'Survived'</span>].values</div><div class="line"></div><div class="line"><span class="comment">### correlation</span></div><div class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> linear_model</div><div class="line">logreg = linear_model.LogisticRegression()</div><div class="line">logreg.fit(trainX,trainY)</div><div class="line">acc_logreg = round(logreg.score(trainX, trainY) * <span class="number">100</span>, <span class="number">2</span>)</div><div class="line">correlation = pd.DataFrame(&#123;<span class="string">'Feature'</span>: featureList, <span class="string">'Correlation'</span>: logreg.coef_[<span class="number">0</span>]&#125;)</div><div class="line">correlation.sort_values(by=<span class="string">'Correlation'</span>, ascending=<span class="keyword">False</span>)</div><div class="line">newFeatureList = correlation[<span class="string">'Feature'</span>][ correlation[<span class="string">'Correlation'</span>]&gt;<span class="number">0.0</span>]</div><div class="line"></div><div class="line">trainX = trainData[newFeatureList].values</div></pre></td></tr></table></figure></p>
+<p>选了几个正相关的特征，再接再励。我想再多搞几个模型，据说昂桑宝很厉害：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># models.py</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">getModels</span><span class="params">()</span>:</span></div><div class="line">    <span class="comment"># Logistic Regression</span></div><div class="line">    <span class="keyword">from</span> sklearn <span class="keyword">import</span> linear_model</div><div class="line">    logreg = linear_model.LogisticRegression()</div><div class="line"></div><div class="line">    <span class="comment"># SVC</span></div><div class="line">    <span class="keyword">from</span> sklearn.svm <span class="keyword">import</span> SVC</div><div class="line">    svc = SVC()</div><div class="line"></div><div class="line">    <span class="comment"># KNN</span></div><div class="line">    <span class="keyword">from</span> sklearn.neighbors <span class="keyword">import</span> KNeighborsClassifier</div><div class="line">    knn = KNeighborsClassifier()</div><div class="line"></div><div class="line">    <span class="comment"># Random Forest</span></div><div class="line">    <span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> RandomForestClassifier</div><div class="line">    random_forest = RandomForestClassifier(n_estimators=<span class="number">100</span>)</div><div class="line">    </div><div class="line">    <span class="comment"># Gaussian Naive Bayes</span></div><div class="line">    <span class="keyword">from</span> sklearn.naive_bayes <span class="keyword">import</span> GaussianNB</div><div class="line">    gaussian = GaussianNB()</div><div class="line">    </div><div class="line">    <span class="comment"># Perceptron</span></div><div class="line">    <span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> Perceptron</div><div class="line">    perceptron = Perceptron()</div><div class="line"></div><div class="line">    <span class="comment"># Linear SVC</span></div><div class="line">    <span class="keyword">from</span> sklearn.svm <span class="keyword">import</span> LinearSVC</div><div class="line">    linear_svc = LinearSVC()</div><div class="line"></div><div class="line">    <span class="comment"># Stochastic Gradient Descent</span></div><div class="line">    <span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> SGDClassifier</div><div class="line">    sgd = SGDClassifier()</div><div class="line"></div><div class="line">    <span class="comment"># Decision Tree</span></div><div class="line">    <span class="keyword">from</span> sklearn.tree <span class="keyword">import</span> DecisionTreeClassifier</div><div class="line">    decision_tree = DecisionTreeClassifier()</div><div class="line">   </div><div class="line">    model_df = pd.DataFrame(&#123;</div><div class="line">    <span class="string">'Name'</span>: [<span class="string">'SVM'</span>, <span class="string">'KNN'</span>, <span class="string">'Logreg'</span>, </div><div class="line">                <span class="string">'Random Forest'</span>, <span class="string">'Naive Bayes'</span>, <span class="string">'Perceptron'</span>, </div><div class="line">                <span class="string">'Stochastic Gradient Decent'</span>, <span class="string">'Linear SVC'</span>, </div><div class="line">                <span class="string">'Decision Tree'</span>],</div><div class="line">    <span class="string">'Model'</span>:[svc, knn, logreg, random_forest, gaussian, perceptron, </div><div class="line">                sgd, linear_svc, decision_tree]&#125;) </div><div class="line"></div><div class="line">    <span class="keyword">return</span> model_df</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">trainModels</span><span class="params">(model_df, trainX, trainY)</span>:</span></div><div class="line">    </div><div class="line">    num = model_df.shape[<span class="number">0</span>]</div><div class="line">    score = np.zeros(num)</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(num):</div><div class="line">        model = model_df.iloc[i][<span class="string">'Model'</span>]</div><div class="line">        model.fit(trainX, trainY)</div><div class="line">        <span class="comment">#assert( model == model_df.iloc[i]['Model'])</span></div><div class="line">        score[i] = round(model.score(trainX, trainY) * <span class="number">100</span>, <span class="number">2</span>)</div><div class="line"></div><div class="line">    df = pd.concat([model_df, pd.Series(score, name = <span class="string">'Score'</span>)], axis=<span class="number">1</span>)</div><div class="line">    df.sort_values(by=<span class="string">'Score'</span>, ascending = <span class="keyword">False</span>, inplace = <span class="keyword">True</span>)</div><div class="line"></div><div class="line">    df[[<span class="string">'Name'</span>,<span class="string">'Score'</span>]].plot()</div><div class="line">    </div><div class="line">    <span class="keyword">return</span> df</div></pre></td></tr></table></figure></p>
+<p>在ensemble之前，看一下学习曲线没毛病（从sklearn官网照抄）：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># learning_curve.py</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line"></div><div class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> learning_curve</div><div class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> ShuffleSplit</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">plotLC</span><span class="params">(model_df, trainX, trainY)</span>:</span></div><div class="line"></div><div class="line">    title = <span class="string">"Learning Curves (Naive Bayes)"</span></div><div class="line">    <span class="comment"># Cross validation with 100 iterations to get smoother mean test and train</span></div><div class="line">    <span class="comment"># score curves, each time with 20% data randomly selected as a validation set.</span></div><div class="line">    </div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(model_df.shape[<span class="number">0</span>]):</div><div class="line">        title = <span class="string">"Learning Curves"</span> + model_df.iloc[i][<span class="string">'Name'</span>]</div><div class="line">        cv = ShuffleSplit(n_splits=<span class="number">100</span>, test_size=<span class="number">0.2</span>, random_state=<span class="number">0</span>)</div><div class="line">        estimator = model_df.iloc[i][<span class="string">'Model'</span>]</div><div class="line">        plot_learning_curve(estimator, title, trainX, trainY, ylim=(<span class="number">0.7</span>, <span class="number">1.01</span>), cv=cv, n_jobs=<span class="number">1</span>)</div><div class="line">        plt.show()</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot_learning_curve</span><span class="params">(estimator, title, X, y, ylim=None, cv=None,</span></span></div><div class="line">                        n_jobs=<span class="number">1</span>, train_sizes=np.linspace<span class="params">(<span class="number">.1</span>, <span class="number">1.0</span>, <span class="number">5</span>)</span>):</div><div class="line">    <span class="string">"""</span></div><div class="line">    Generate a simple plot of the test and training learning curve.</div><div class="line"></div><div class="line">    Parameters</div><div class="line">    ----------</div><div class="line">    estimator : object type that implements the "fit" and "predict" methods</div><div class="line">        An object of that type which is cloned for each validation.</div><div class="line"></div><div class="line">    title : string</div><div class="line">        Title for the chart.</div><div class="line"></div><div class="line">    X : array-like, shape (n_samples, n_features)</div><div class="line">        Training vector, where n_samples is the number of samples and</div><div class="line">        n_features is the number of features.</div><div class="line"></div><div class="line">    y : array-like, shape (n_samples) or (n_samples, n_features), optional</div><div class="line">        Target relative to X for classification or regression;</div><div class="line">        None for unsupervised learning.</div><div class="line"></div><div class="line">    ylim : tuple, shape (ymin, ymax), optional</div><div class="line">        Defines minimum and maximum yvalues plotted.</div><div class="line"></div><div class="line">    cv : int, cross-validation generator or an iterable, optional</div><div class="line">        Determines the cross-validation splitting strategy.</div><div class="line">        Possible inputs for cv are:</div><div class="line">          - None, to use the default 3-fold cross-validation,</div><div class="line">          - integer, to specify the number of folds.</div><div class="line">          - An object to be used as a cross-validation generator.</div><div class="line">          - An iterable yielding train/test splits.</div><div class="line"></div><div class="line">        For integer/None inputs, if ``y`` is binary or multiclass,</div><div class="line">        :class:`StratifiedKFold` used. If the estimator is not a classifier</div><div class="line">        or if ``y`` is neither binary nor multiclass, :class:`KFold` is used.</div><div class="line"></div><div class="line">        Refer :ref:`User Guide &lt;cross_validation&gt;` for the various</div><div class="line">        cross-validators that can be used here.</div><div class="line"></div><div class="line">    n_jobs : integer, optional</div><div class="line">        Number of jobs to run in parallel (default 1).</div><div class="line">    """</div><div class="line">    plt.figure()</div><div class="line">    plt.title(title)</div><div class="line">    <span class="keyword">if</span> ylim <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">None</span>:</div><div class="line">        plt.ylim(*ylim)</div><div class="line">    plt.xlabel(<span class="string">"Training examples"</span>)</div><div class="line">    plt.ylabel(<span class="string">"Score"</span>)</div><div class="line">    train_sizes, train_scores, test_scores = learning_curve(</div><div class="line">        estimator, X, y, cv=cv, n_jobs=n_jobs, train_sizes=train_sizes)</div><div class="line">    train_scores_mean = np.mean(train_scores, axis=<span class="number">1</span>)</div><div class="line">    train_scores_std = np.std(train_scores, axis=<span class="number">1</span>)</div><div class="line">    test_scores_mean = np.mean(test_scores, axis=<span class="number">1</span>)</div><div class="line">    test_scores_std = np.std(test_scores, axis=<span class="number">1</span>)</div><div class="line">    plt.grid()</div><div class="line"></div><div class="line">    plt.fill_between(train_sizes, train_scores_mean - train_scores_std,</div><div class="line">                     train_scores_mean + train_scores_std, alpha=<span class="number">0.1</span>,</div><div class="line">                     color=<span class="string">"r"</span>)</div><div class="line">    plt.fill_between(train_sizes, test_scores_mean - test_scores_std,</div><div class="line">                     test_scores_mean + test_scores_std, alpha=<span class="number">0.1</span>, color=<span class="string">"g"</span>)</div><div class="line">    plt.plot(train_sizes, train_scores_mean, <span class="string">'o-'</span>, color=<span class="string">"r"</span>,</div><div class="line">             label=<span class="string">"Training score"</span>)</div><div class="line">    plt.plot(train_sizes, test_scores_mean, <span class="string">'o-'</span>, color=<span class="string">"g"</span>,</div><div class="line">             label=<span class="string">"Cross-validation score"</span>)</div><div class="line"></div><div class="line">    plt.legend(loc=<span class="string">"best"</span>)</div><div class="line">    <span class="keyword">return</span> plt</div></pre></td></tr></table></figure></p>
+<p>之后，让我们完成模型训练和预测吧：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#Titanic.py 下部分</span></div><div class="line"></div><div class="line"><span class="comment">### get model and train them</span></div><div class="line"><span class="keyword">import</span> models</div><div class="line">reload(models)</div><div class="line">model_df = models.getModels()</div><div class="line"></div><div class="line">model_df = models.trainModels(model_df, trainX, trainY)</div><div class="line"></div><div class="line"><span class="comment">### learning curve</span></div><div class="line"><span class="keyword">import</span> learning_curve</div><div class="line">reload(learning_curve)</div><div class="line"><span class="comment">#learning_curve.plotLC(model_df, trainX, trainY)</span></div><div class="line"></div><div class="line"><span class="comment">#4. predict </span></div><div class="line">testData = pd.read_csv(<span class="string">'test.csv'</span>, header = <span class="number">0</span>, index_col = <span class="number">0</span>)</div><div class="line">complete.complete(testData)</div><div class="line"></div><div class="line">testX = testData[newFeatureList].values </div><div class="line">  </div><div class="line"><span class="comment"># ensemble</span></div><div class="line">top3model =  models[<span class="string">'Name'</span>][<span class="number">0</span>:<span class="number">3</span>].values</div><div class="line">predictY= np.zeros(testX.shape[<span class="number">0</span>])</div><div class="line"></div><div class="line"><span class="keyword">for</span> model <span class="keyword">in</span> top3model:</div><div class="line">    predictY += model.predict(testX)</div><div class="line">    </div><div class="line">predictY[predictY &lt;= <span class="number">1</span>] = <span class="number">0</span></div><div class="line">predictY[predictY &gt;= <span class="number">2</span>] = <span class="number">1</span></div><div class="line"></div><div class="line">output = DataFrame(&#123;<span class="string">'PassengerId'</span>: testData.index,<span class="string">'Survived'</span>: predictY.astype(int)&#125;)</div><div class="line">output.to_csv(<span class="string">'output.csv'</span>, index = <span class="keyword">False</span>)</div></pre></td></tr></table></figure></p>
+<p>最后，让我们充满期待的提交吧。</p>
+<p><strong>小手一抖，得分0.77033，涨了0.005，Fucccck。</strong></p>
+<p>我还能说什么，这里应有尼克扬脸。</p>
+<blockquote class="blockquote-center"><p>做了点微小的工作，谢谢大家。   </p>
+</blockquote>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/06/26/（一）大数据和机器学习练习环境搭建/" rel="next" title="（一）大数据和机器学习练习环境搭建">
+                <i class="fa fa-chevron-left"></i> （一）大数据和机器学习练习环境搭建
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/02/差距的形成/" rel="prev" title="差距的形成">
+                差距的形成 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/06/26/只提高了0-015/"
+           data-title="只提高了0.015" data-url="http://yoursite.com/2017/06/26/只提高了0-015/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="szhang" />
+          <p class="site-author-name" itemprop="name">szhang</p>
+          <p class="site-description motion-element" itemprop="description">我想要自由，像呼吸一样渴望。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">29</span>
+              <span class="site-state-item-name">文章</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">专题</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://www.linkedin.com/in/%E6%8C%AF%E8%88%AA-%E5%AD%99-210aa2113/" target="_blank" title="LinkedIn">
+                  
+                    <i class="fa fa-fw fa-linkedin"></i>
+                  
+                  LinkedIn
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/hangsz" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/HANGZS" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              相关链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://zhuanlan.zhihu.com/solver?author=HANGZS" title="流场求解器初探" target="_blank">流场求解器初探</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://zhuanlan.zhihu.com/c_33038803?author=HANGZS" title="流体探秘" target="_blank">流体探秘</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">szhang</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+本站总访问量 <span id="busuanzi_value_site_pv"></span> &nbsp&nbsp&nbsp
+您是第<span id="busuanzi_value_site_uv"></span>个来到的小伙伴
+
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"hangsz"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      
+      <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js?v=5.1.0"></script>
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("xSG9qhib9q3QrSXUqm8SfRRK-gzGzoHsz", "5SAppRd4YdPJzHbcoLKeOqfw");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  <script type="text/javascript" src="/js/src/love.js"></script>
+  <script type="text/javascript" src="/js/src/particle.js"></script>
+
+</body>
+</html>
