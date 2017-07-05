@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="IBM,ML," />
 
 
 
@@ -84,24 +84,21 @@
 
 
 
-<meta name="description" content="版权声明：文章为博主原创，转载请注明出处。    前言大数据和机器学习目前正处于风口，对相关人才需求很大，然而国内科班出身的人才确实不多，想要转行的务必抓住这个短暂的时间窗口。而且，我个人认为目前经济已经进入通缩状态，失业率看涨，进入新兴行业或许会有不错的转机。我也是通过自学转入这个领域的，我写这个专栏的目的一方面是梳理我所学的专业知识以及工作中用到的一些算法和项目，另一方面也希望能够和大家一起互">
-<meta name="keywords">
+<meta name="description" content="版权声明：文章为博主原创，转载请注明出处。    之前写了篇环境搭建，没什么技术含量。不过看过我写流场求解器专栏的朋友应该知道，我写专栏喜欢从浅入深写。本来应该写怎么用好ipython，不过呢，今天我准备写点有趣的，也让大家知道本渣从来不水。 基础背景在IT大系统运维领域，有一种东西叫ticket，中文名工作票或者问题单。其主要内容就是一个故障或者告警的描述，以及相应的解决方案。IT运维领域每天的">
+<meta name="keywords" content="IBM,ML">
 <meta property="og:type" content="article">
-<meta property="og:title" content="（一）大数据和机器学习练习环境搭建">
-<meta property="og:url" content="http://yoursite.com/2017/06/26/（一）大数据和机器学习练习环境搭建/index.html">
+<meta property="og:title" content="读paper，带你看工业界怎么玩ML">
+<meta property="og:url" content="http://yoursite.com/2017/07/05/读paper，带你看工业界怎么玩ML/index.html">
 <meta property="og:site_name" content="航哥的小站">
-<meta property="og:description" content="版权声明：文章为博主原创，转载请注明出处。    前言大数据和机器学习目前正处于风口，对相关人才需求很大，然而国内科班出身的人才确实不多，想要转行的务必抓住这个短暂的时间窗口。而且，我个人认为目前经济已经进入通缩状态，失业率看涨，进入新兴行业或许会有不错的转机。我也是通过自学转入这个领域的，我写这个专栏的目的一方面是梳理我所学的专业知识以及工作中用到的一些算法和项目，另一方面也希望能够和大家一起互">
-<meta property="og:image" content="http://yoursite.com/2017/06/26/（一）大数据和机器学习练习环境搭建/1.png">
-<meta property="og:image" content="http://yoursite.com/2017/06/26/（一）大数据和机器学习练习环境搭建/2.png">
-<meta property="og:image" content="http://yoursite.com/2017/06/26/（一）大数据和机器学习练习环境搭建/3.png">
-<meta property="og:image" content="http://yoursite.com/2017/06/26/（一）大数据和机器学习练习环境搭建/4.png">
-<meta property="og:image" content="http://yoursite.com/2017/06/26/（一）大数据和机器学习练习环境搭建/5.png">
-<meta property="og:image" content="http://yoursite.com/2017/06/26/（一）大数据和机器学习练习环境搭建/6.png">
-<meta property="og:updated_time" content="2017-06-26T14:49:18.081Z">
+<meta property="og:description" content="版权声明：文章为博主原创，转载请注明出处。    之前写了篇环境搭建，没什么技术含量。不过看过我写流场求解器专栏的朋友应该知道，我写专栏喜欢从浅入深写。本来应该写怎么用好ipython，不过呢，今天我准备写点有趣的，也让大家知道本渣从来不水。 基础背景在IT大系统运维领域，有一种东西叫ticket，中文名工作票或者问题单。其主要内容就是一个故障或者告警的描述，以及相应的解决方案。IT运维领域每天的">
+<meta property="og:image" content="http://yoursite.com/2017/07/05/读paper，带你看工业界怎么玩ML/1.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/05/读paper，带你看工业界怎么玩ML/2.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/05/读paper，带你看工业界怎么玩ML/3.png">
+<meta property="og:updated_time" content="2017-07-05T11:45:09.895Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="（一）大数据和机器学习练习环境搭建">
-<meta name="twitter:description" content="版权声明：文章为博主原创，转载请注明出处。    前言大数据和机器学习目前正处于风口，对相关人才需求很大，然而国内科班出身的人才确实不多，想要转行的务必抓住这个短暂的时间窗口。而且，我个人认为目前经济已经进入通缩状态，失业率看涨，进入新兴行业或许会有不错的转机。我也是通过自学转入这个领域的，我写这个专栏的目的一方面是梳理我所学的专业知识以及工作中用到的一些算法和项目，另一方面也希望能够和大家一起互">
-<meta name="twitter:image" content="http://yoursite.com/2017/06/26/（一）大数据和机器学习练习环境搭建/1.png">
+<meta name="twitter:title" content="读paper，带你看工业界怎么玩ML">
+<meta name="twitter:description" content="版权声明：文章为博主原创，转载请注明出处。    之前写了篇环境搭建，没什么技术含量。不过看过我写流场求解器专栏的朋友应该知道，我写专栏喜欢从浅入深写。本来应该写怎么用好ipython，不过呢，今天我准备写点有趣的，也让大家知道本渣从来不水。 基础背景在IT大系统运维领域，有一种东西叫ticket，中文名工作票或者问题单。其主要内容就是一个故障或者告警的描述，以及相应的解决方案。IT运维领域每天的">
+<meta name="twitter:image" content="http://yoursite.com/2017/07/05/读paper，带你看工业界怎么玩ML/1.png">
 
 
 
@@ -129,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/06/26/（一）大数据和机器学习练习环境搭建/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/07/05/读paper，带你看工业界怎么玩ML/"/>
 
 
 
 
 
-  <title> （一）大数据和机器学习练习环境搭建 | 航哥的小站 </title>
+  <title> 读paper，带你看工业界怎么玩ML | 航哥的小站 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -266,7 +263,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/26/（一）大数据和机器学习练习环境搭建/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/05/读paper，带你看工业界怎么玩ML/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="szhang">
@@ -290,7 +287,7 @@
             
             
               
-                （一）大数据和机器学习练习环境搭建
+                读paper，带你看工业界怎么玩ML
               
             
           </h1>
@@ -303,8 +300,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表：</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-26T22:16:14+08:00">
-                2017-06-26
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-05T19:18:54+08:00">
+                2017-07-05
               </time>
             
 
@@ -317,21 +314,39 @@
                 <i class="fa fa-calendar-check-o"></i>
               </span>
               <span class="post-meta-item-text">更新：</span>
-              <time title="更新：" itemprop="dateModified" datetime="2017-06-26T22:49:18+08:00">
-                2017-06-26
+              <time title="更新：" itemprop="dateModified" datetime="2017-07-05T19:45:09+08:00">
+                2017-07-05
               </time>
             
           </span>
 
 		  
           
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">专题：</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Big-Data/" itemprop="url" rel="index">
+                    <span itemprop="name">Big Data</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
-                <a href="/2017/06/26/（一）大数据和机器学习练习环境搭建/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/06/26/（一）大数据和机器学习练习环境搭建/" itemprop="commentCount"></span>
+                <a href="/2017/07/05/读paper，带你看工业界怎么玩ML/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/07/05/读paper，带你看工业界怎么玩ML/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -341,7 +356,7 @@
 
           
           
-             <span id="/2017/06/26/（一）大数据和机器学习练习环境搭建/" class="leancloud_visitors" data-flag-title="（一）大数据和机器学习练习环境搭建">
+             <span id="/2017/07/05/读paper，带你看工业界怎么玩ML/" class="leancloud_visitors" data-flag-title="读paper，带你看工业界怎么玩ML">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -368,61 +383,35 @@
       
         <blockquote class="blockquote-center"><p>版权声明：文章为博主原创，转载请注明出处。  </p>
 </blockquote>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>大数据和机器学习目前正处于风口，对相关人才需求很大，然而国内科班出身的人才确实不多，想要转行的务必抓住这个短暂的时间窗口。而且，我个人认为目前经济已经进入通缩状态，失业率看涨，进入新兴行业或许会有不错的转机。<br>我也是通过自学转入这个领域的，我写这个专栏的目的一方面是梳理我所学的专业知识以及工作中用到的一些算法和项目，另一方面也希望能够和大家一起互相学习、快速成长。</p>
-<p><strong>我在win下做项目，所以只讲win下怎么快速部署完整的学习和应用环境。</strong></p>
+<p>之前写了篇环境搭建，没什么技术含量。不过看过我写流场求解器专栏的朋友应该知道，我写专栏喜欢从浅入深写。本来应该写怎么用好ipython，不过呢，今天我准备写点有趣的，也让大家知道本渣从来不水。</p>
+<h3 id="基础背景"><a href="#基础背景" class="headerlink" title="基础背景"></a>基础背景</h3><p>在IT大系统运维领域，有一种东西叫ticket，中文名工作票或者问题单。其主要内容就是一个故障或者告警的描述，以及相应的解决方案。IT运维领域每天的主要事情就是处理大量的问题单，现在啥都讲究智能化，所以智能运维也喊起来了。不过这不是噱头，而是真真切切极大提高了效率。</p>
+<p>针对这个问题单，可做的文章可多了。即可做预测也可以做推测，预测比如分类、推荐，推测比如KPI学习、阈值学习等。</p>
+<p>今天我们就来看最基本的推荐是如何使用这个问题单的。</p>
 <hr>
-<h2 id="快速环境配置"><a href="#快速环境配置" class="headerlink" title="快速环境配置"></a>快速环境配置</h2><p>想要节省时间，直接看这里。想知道为什么这么安装，以及一些优化和美化方法，可以直接看下面慢速环境配置。</p>
-<ol>
-<li>安装python，安装时要点选把python加入系统path，下载地址：<a href="https://www.python.org/downloads/" target="_blank" rel="external">Download Python</a>；</li>
-<li>在某文件下放入如下3个文件：<ul>
-<li>numpy和mkl的打包版：<a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy" target="_blank" rel="external">http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy</a></li>
-<li>scipy的打包版：<a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#scipy" target="_blank" rel="external">http://www.lfd.uci.edu/~gohlke/pythonlibs/#scipy</a></li>
-<li>rapid_install.py</li>
-</ul>
-</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># rapid-install.py</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> pip</div><div class="line"><span class="keyword">from</span> subprocess <span class="keyword">import</span> call</div><div class="line"></div><div class="line"><span class="comment"># numpy, scipy换成你自己的版本 </span></div><div class="line">package_list = [<span class="string">'numpy‑1.13.0+mkl‑cp27‑cp27m‑win_amd64.whl'</span>, </div><div class="line">                <span class="string">'scipy‑0.19.0‑cp27‑cp27m‑win_amd64.whl'</span>,</div><div class="line">                <span class="string">'pandas'</span>, <span class="string">'matplotlib'</span>, <span class="string">'scikit-learn'</span>]</div><div class="line"></div><div class="line"><span class="keyword">for</span> package <span class="keyword">in</span> package_list:</div><div class="line">    call(<span class="string">"pip install --upgrade "</span> + package, shell=<span class="keyword">True</span>)</div></pre></td></tr></table></figure>
-<p>然后，在此目录下，按住shift+鼠标右击，选择打开命令行，输入 <code>python rapid_install.py</code>，之后就可以坐等完成了。</p>
+<h3 id="问题来了"><a href="#问题来了" class="headerlink" title="问题来了"></a>问题来了</h3><p>问：如果我有很多已经闭环的问题单——包含问题描述和解决方案组，如果来了一个开放的问题单——只有问题，那么我能干啥？<br>你肯定答：too simple，我可以做分类啊，确定好类别，不就知道用哪些解决方案了吗。<br>我：恭喜你，答对了，工业界就是这么干的。</p>
+<p>看看IBM怎么做，<a href="https://link.zhihu.com/?target=http%3A//wan.poly.edu/KDD2012/docs/p1393.pdf" target="_blank" rel="external">SmartDispatch……</a>，白纸黑字写着偌大的 <strong>SVM</strong>：<br><img src="/2017/07/05/读paper，带你看工业界怎么玩ML/1.png" alt="1.png" title=""></p>
+<p>通篇看下来，你会发现核心算法就在SVM以及一个比较trivial、人工痕迹明显的DTA算法，这个算法做进了这个SmartDispatch软件。</p>
 <hr>
-<h2 id="慢速环境配置"><a href="#慢速环境配置" class="headerlink" title="慢速环境配置"></a>慢速环境配置</h2><p>我崇尚简约美，所以我并不喜欢用一体式的anaconda作为开发环境，anaconda优点在于集成了底层需要的c和fortran的编译库，也提供了numpy和scipy依赖的诸如BLAS、LAPACK等的性能优化（想要和GPU结合还需要付钱）。<br>不过，如果只是作为平时练习和项目demo使用，按照我用的开发环境就可以了，只需要官方python和最美、最强大的编辑器Visual Studio Code足以，很纯洁。</p>
+<h3 id="问题又来了"><a href="#问题又来了" class="headerlink" title="问题又来了"></a>问题又来了</h3><p>事实上，一个问题描述可能描述的并不是真正的问题，比如你说你上不了网，可能是网卡废了，也可能是服务器挂了，也有可能是你网线都没插。对于问题单也是如此，一个问题并非一个解决方案组就能直接解决，往往需要经过多个运维团队才解决，而这个解决流程可能并不高效。</p>
+<p>问：如果我有很多已经闭环的问题单——包含问题描述和解决方案组的序列，如果来了一个开放的问题单——只有问题，那么我能干啥？<br>你肯定答：可以推荐解决方案序列啊。<br>我：恭喜你，又答对了。</p>
+<p>这篇paper还是IBM的，用Markov 模型做序列推荐，<a href="http://www.vldb.org/pvldb/1/1454193.pdf" target="_blank" rel="external">EasyTicket……</a>:<br><img src="/2017/07/05/读paper，带你看工业界怎么玩ML/2.png" alt="2.png" title=""></p>
+<p>就这个算法做进了EasyTicket这个工具。</p>
 <hr>
-<h3 id="1-Python-安装"><a href="#1-Python-安装" class="headerlink" title="1. Python 安装"></a>1. Python 安装</h3><p>下载地址：<a href="https://link.zhihu.com/?target=https%3A//www.python.org/downloads/" target="_blank" rel="external">Download Python</a>。<br>我用的是python 2.7，因为2.x的库相对完善，其实2.x和3.x在我看来都一样，按自己喜好来就可以。根据自己操作系统位数来选择合适的版本，32位选择 x86 MSI，64位选x86-64 MSI。<br>安装的过程中，注意如图示这一步，<strong>把最后一个×改成下拉框内第一个</strong>，这样可以将python路径自动加到系统的path路径下，此外可以看到pip这个包管理工具也默认安装了。<br><img src="/2017/06/26/（一）大数据和机器学习练习环境搭建/1.png" alt="1.png" title=""><br>到命令行工具下验证python是否安装成功，可以看到python版本和位数：<br><img src="/2017/06/26/（一）大数据和机器学习练习环境搭建/2.png" alt="2.png" title=""></p>
+<h3 id="那么我还有问题"><a href="#那么我还有问题" class="headerlink" title="那么我还有问题"></a>那么我还有问题</h3><p>为啥我问题单只有解决方案组的信息啊，我还要加上具体解决专家的信息。</p>
+<p>问：如果我有很多已经闭环的问题单——包含问题描述和解决方案组的序列，序列中包含具体的专家，如果来了一个开放的问题单——只有问题，那么我能干啥？<br>你肯定答：你傻呀，这不一样啊，你可以做专家序列推荐啊。<br>我：你才傻，我才不这么做。</p>
+<p>又是IBM的文章（（IBM：我TM招谁惹谁了）），<a href="http://jamjoom.net/publications/jamjoom-systemsjournal-2009-aimhi.pdf" target="_blank" rel="external">AIM-HI……</a>，有序列不一定要搞序列推荐啊，人家直接搞分类，每个问题搞几个方案组，算一下各个专家以前解决类似方法的成果，然后从中方案组中选出合适的专家推荐出去。<br><img src="/2017/07/05/读paper，带你看工业界怎么玩ML/3.png" alt="3.png" title=""></p>
+<p>大白话写着，用 最大似然估计或者朴素贝叶斯或者决策树来搞个分类完事。然后，又做成了一个软件AIM-HI。</p>
 <hr>
-<h3 id="2-Visual-Studio-Code-安装"><a href="#2-Visual-Studio-Code-安装" class="headerlink" title="2. Visual Studio Code 安装"></a>2. Visual Studio Code 安装</h3><p>下载地址：<a href="https://link.zhihu.com/?target=https%3A//code.visualstudio.com/Download" target="_blank" rel="external">Download Visual Studio Code - Mac, Linux, Windows</a>。</p>
-<h4 id="2-1"><a href="#2-1" class="headerlink" title="2.1"></a>2.1</h4><p>安装时，<strong>在这一步建议把所有都勾上</strong>，这样以后点击鼠标右键可以快速启动。<br><img src="/2017/06/26/（一）大数据和机器学习练习环境搭建/3.png" alt="3.png" title=""></p>
-<h4 id="2-2-优化和美化"><a href="#2-2-优化和美化" class="headerlink" title="2.2 优化和美化"></a>2.2 优化和美化</h4><p>按个人喜好设置，File-&gt; Preferences：<br><img src="/2017/06/26/（一）大数据和机器学习练习环境搭建/4.png" alt="4.png" title=""><br><img src="/2017/06/26/（一）大数据和机器学习练习环境搭建/5.png" alt="5.png" title=""></p>
-<h3 id="3-大数据和机器学习库-安装"><a href="#3-大数据和机器学习库-安装" class="headerlink" title="3. 大数据和机器学习库 安装"></a>3. 大数据和机器学习库 安装</h3><p>主要就是5个库：numpy、scipy、pandas、matplotlib、scikit-learn。</p>
-<p>打开vs code，按 <strong>Crtl + `</strong>    进入vs code自带的命令行环境—powershell，比win自带的好用。</p>
-<h4 id="3-1-numpy-和-scipy-安装"><a href="#3-1-numpy-和-scipy-安装" class="headerlink" title="3.1 numpy 和 scipy 安装"></a>3.1 numpy 和 scipy 安装</h4><blockquote>
-<blockquote>
-<blockquote>
-<p><a href="https://www.scipy.org/scipylib/building/windows.html#id2" target="_blank" rel="external">Overview</a>（官方说明）<br>Compared to OSX and Linux, building NumPy and SciPy on Windows is difficult, largely due to the lack of compatible, open-source libraries like LAPACK or ATLAS that are necessary to build both libraries and have them perform relatively well. You can’t sudo apt-get install everything like you can on the other two platforms.</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>numpy是数值代数库，scipy是科学计算库。在win下安装这两包比较坑爹，主要是这俩包依赖的一些c和fortran底层库存在平台兼容性问题。事实上，numpy可以直接用<code>pip install numpy</code> 安装，但功能和性能受限，而scipy干脆就是不能安装。</p>
-<p>幸好有高手对这俩包做了完整的binary库，我们可以下载后直接安装。</p>
+<h3 id="Paper读完了"><a href="#Paper读完了" class="headerlink" title="Paper读完了"></a>Paper读完了</h3><p>啥感受，是不是产生一种我TM也能干的豪气？<br>哈哈，对头，要的就是这个感觉，我写这篇文章的目的到这里也该揭示出来了：</p>
 <ul>
-<li>numpy和mkl的打包版：<a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy" target="_blank" rel="external">http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy</a></li>
-<li>scipy的打包版：<a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#scipy" target="_blank" rel="external">http://www.lfd.uci.edu/~gohlke/pythonlibs/#scipy</a></li>
+<li><strong>大数据和机器学习在工业界就是非常实在的东西，不要觉得它很神秘、很高端，要用非常牛逼的、别人看不懂的算法来搞。错，大错特错，算法不是本质的，本质的是解决问题，不要小看任何普通的算法，脚踏实地吃透它，然后用之解决问题。</strong></li>
+<li><strong>工业界和竞赛非常不同，竞赛题是良定问题。而工业界面对的是纷杂的数据，从数据中去挖什么可能都是不知道的，需要去发现，这也是为什么Pony Ma说DT时代重要的是应用场景，而非数据和技术。</strong></li>
 </ul>
-<p>安装：<code>pip install xxx.whl</code>（注意：文件名要修改成你下载的，以及文件要在当前命令行所在目录。）</p>
-<p>可以进入ipython环境，输入 <code>import numpy, scipy</code>，验证是否安装成功，无异常则成功。</p>
-<h4 id="3-2-pandas、matplotlib-、scikit-learn-安装"><a href="#3-2-pandas、matplotlib-、scikit-learn-安装" class="headerlink" title="3.2 pandas、matplotlib 、scikit-learn 安装"></a>3.2 pandas、matplotlib 、scikit-learn 安装</h4><p>pandas是统计学库，在数据处理中（数据清洗）用得很多；<br>matplotlib是2D可视化库，用图来说明问题是最好的方式；<br>scikit-learn是python领域比较火的机器学习库。<br>安装：</p>
-<ul>
-<li><code>pip install  pandas</code></li>
-<li><code>pip install matplotlib</code></li>
-<li><code>pip install scikit-learn</code></li>
-</ul>
-<p>可以进入ipython环境，输入 <code>import pandas, matplotlib, sklearn</code>，验证是否安装成功，无异常则成功。</p>
-<h4 id="3-3-ipython-安装"><a href="#3-3-ipython-安装" class="headerlink" title="3.3 ipython 安装"></a>3.3 ipython 安装</h4><p>其实到上面这一步就可以了，但是我们只要再多做一点点，就能成倍的提高工作效率。</p>
-<p>ipython 是一个美化过的python解释器，同时提供了和操作系统交互的能力，同时一些提供了很强大的magic命令，用起来真是异常方便。</p>
-<p>安装：<code>pip install ipython</code></p>
-<p>不出意外肯定会出如下错误—需要安装python拓展C++ compiler模块，下载<a href="https://www.microsoft.com/en-us/download/details.aspx?id=44266" target="_blank" rel="external">Microsoft Visual C++ Compiler for Python 2.7</a>。是个.msi文件，直接安装即可，安装好后，重新输入安装命令来安装ipython。<br><img src="/2017/06/26/（一）大数据和机器学习练习环境搭建/6.png" alt="6.png" title=""></p>
-<p>在命令行输入 <code>ipython</code> 来验证是否安装成功， 输入 <code>exit</code> 退出ipython环境。</p>
-<h3 id="4-库更新"><a href="#4-库更新" class="headerlink" title="4. 库更新"></a>4. 库更新</h3><p>用<code>pip list --outdated</code> 可以查看哪些库已经更新了。下面我提供一个批量更新库脚本，能够保证numpy和scipy不出问题。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment"># pip-upgrade.py</span></div><div class="line"><span class="keyword">import</span> pip</div><div class="line"><span class="keyword">from</span> subprocess <span class="keyword">import</span> call</div><div class="line"> </div><div class="line"><span class="keyword">for</span> dist <span class="keyword">in</span> pip.get_installed_distributions():</div><div class="line">    call(<span class="string">"pip install --upgrade "</span> + dist.project_name, shell=<span class="keyword">True</span>)</div><div class="line"></div><div class="line"><span class="comment"># numpy 换成新的</span></div><div class="line">call(<span class="string">"pip install numpy‑1.13.0+mkl‑cp27‑cp27m‑win_amd64.whl"</span>)</div><div class="line"><span class="comment"># scipy 换成新的</span></div><div class="line">call(<span class="string">"pip install scipy‑0.19.0‑cp27‑cp27m‑win_amd64.whl"</span>)</div></pre></td></tr></table></figure></p>
-<h2 id="以后会写的东西"><a href="#以后会写的东西" class="headerlink" title="以后会写的东西"></a>以后会写的东西</h2><p>环境配置是容易的，后面的练习和使用才是最困难的，numpy、scipy等等中都有很多的api，如何去学习让人很头疼。其实，每个库都有真正核心的api，掌握这些就能干大多数活了，以后的文章我会每个库写一些核心和常用的api，让大家都能聚焦于最重要的东西，都能快速上手。</p>
-<p>最后，是我的刚建立的微信订阅号 ，文章会同时发送到订阅号上，欢迎关注，搜索 <code>键盘数据侠</code>或者<code>jp-sjx</code>进行关注。</p>
+<p>事实上，换你上你还真干不了，因为文章基本算法的背后是针对实际问题无数的实验、微小调整和优化，不能很好的把握透这些基本的算法，想做优化、想解决问题，如无根之萍。</p>
+<hr>
+<h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><p>[1] Agarwal S, Sindhgatta R, Sengupta B. SmartDispatch:enabling efficient ticket dispatch in an IT service environment[C]// ACM SIGKDD International Conference on Knowledge Discovery and Data Mining. ACM, 2012:1393-1401.<br>[2] Shao Q, Chen Y, Tao S, et al. EasyTicket: a ticket routing recommendation engine for enterprise problem resolution[J]. Proceedings of the Vldb Endowment, 2008, 1(2):1436-1439.<br>[3] Khan A, Jamjoom H, Sun J. AIM-HI: A framework for request routing in large-scale IT global service delivery[J]. Ibm Journal of Research &amp; Development, 2009, 53(6):4:1-4:10.</p>
+<hr>
+<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><p>我还是很尊敬IBM公司的，我不会去黑它，仅作调侃。</p>
 <blockquote class="blockquote-center"><p>做了点微小的工作，谢谢大家。   </p>
 </blockquote>
       
@@ -445,10 +434,22 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/IBM/" rel="tag"># IBM</a>
+          
+            <a href="/tags/ML/" rel="tag"># ML</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/05/初学者必须撸清的几个概念/" rel="next" title="初学者必须撸清的几个概念">
+                <i class="fa fa-chevron-left"></i> 初学者必须撸清的几个概念
+              </a>
             
           </div>
 
@@ -456,7 +457,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/06/26/只提高了0-015/" rel="prev" title="只提高了0.015">
+              <a href="/2017/07/03/只提高了0-015/" rel="prev" title="只提高了0.015">
                 只提高了0.015 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -484,8 +485,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/06/26/（一）大数据和机器学习练习环境搭建/"
-           data-title="（一）大数据和机器学习练习环境搭建" data-url="http://yoursite.com/2017/06/26/（一）大数据和机器学习练习环境搭建/">
+      <div class="ds-thread" data-thread-key="2017/07/05/读paper，带你看工业界怎么玩ML/"
+           data-title="读paper，带你看工业界怎么玩ML" data-url="http://yoursite.com/2017/07/05/读paper，带你看工业界怎么玩ML/">
       </div>
     
   </div>
@@ -530,7 +531,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">29</span>
+              <span class="site-state-item-count">32</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
@@ -538,7 +539,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">专题</span>
               </a>
             </div>
@@ -547,7 +548,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-count">27</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -639,7 +640,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快速环境配置"><span class="nav-number">2.</span> <span class="nav-text">快速环境配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#慢速环境配置"><span class="nav-number">3.</span> <span class="nav-text">慢速环境配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Python-安装"><span class="nav-number">3.1.</span> <span class="nav-text">1. Python 安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Visual-Studio-Code-安装"><span class="nav-number">3.2.</span> <span class="nav-text">2. Visual Studio Code 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1"><span class="nav-number">3.2.1.</span> <span class="nav-text">2.1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-优化和美化"><span class="nav-number">3.2.2.</span> <span class="nav-text">2.2 优化和美化</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-大数据和机器学习库-安装"><span class="nav-number">3.3.</span> <span class="nav-text">3. 大数据和机器学习库 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-numpy-和-scipy-安装"><span class="nav-number">3.3.1.</span> <span class="nav-text">3.1 numpy 和 scipy 安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-pandas、matplotlib-、scikit-learn-安装"><span class="nav-number">3.3.2.</span> <span class="nav-text">3.2 pandas、matplotlib 、scikit-learn 安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-ipython-安装"><span class="nav-number">3.3.3.</span> <span class="nav-text">3.3 ipython 安装</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-库更新"><span class="nav-number">3.4.</span> <span class="nav-text">4. 库更新</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#以后会写的东西"><span class="nav-number">4.</span> <span class="nav-text">以后会写的东西</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#基础背景"><span class="nav-number">1.</span> <span class="nav-text">基础背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题来了"><span class="nav-number">2.</span> <span class="nav-text">问题来了</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题又来了"><span class="nav-number">3.</span> <span class="nav-text">问题又来了</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#那么我还有问题"><span class="nav-number">4.</span> <span class="nav-text">那么我还有问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Paper读完了"><span class="nav-number">5.</span> <span class="nav-text">Paper读完了</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文献"><span class="nav-number">6.</span> <span class="nav-text">参考文献</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最后"><span class="nav-number">7.</span> <span class="nav-text">最后</span></a></li></ol></div>
             
 
           </div>

@@ -1,0 +1,976 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="ML,Learning Theory," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/Elon Musk.jpg?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="版权声明：文章为博主原创，转载请注明出处。    在不涉及创新的学习中，我认为学不懂、不会用的原因只有两种：  概念的定义没有明确； 定义这个概念的动机没有明确。  能够精确地书面化、而不是模糊的口语化说出一个概念，并对概念中涉及的其他概念能够递归式的做到，这样可以认为是明确了概念的定义。能够做到知道一个概念是为了解决什么问题而被提出的，它解决了这个问题没有，它带来了什么新问题，就算明白了定义概念">
+<meta name="keywords" content="ML,Learning Theory">
+<meta property="og:type" content="article">
+<meta property="og:title" content="初学者必须撸清的几个概念">
+<meta property="og:url" content="http://yoursite.com/2017/07/05/初学者必须撸清的几个概念/index.html">
+<meta property="og:site_name" content="航哥的小站">
+<meta property="og:description" content="版权声明：文章为博主原创，转载请注明出处。    在不涉及创新的学习中，我认为学不懂、不会用的原因只有两种：  概念的定义没有明确； 定义这个概念的动机没有明确。  能够精确地书面化、而不是模糊的口语化说出一个概念，并对概念中涉及的其他概念能够递归式的做到，这样可以认为是明确了概念的定义。能够做到知道一个概念是为了解决什么问题而被提出的，它解决了这个问题没有，它带来了什么新问题，就算明白了定义概念">
+<meta property="og:updated_time" content="2017-07-05T11:40:22.592Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="初学者必须撸清的几个概念">
+<meta name="twitter:description" content="版权声明：文章为博主原创，转载请注明出处。    在不涉及创新的学习中，我认为学不懂、不会用的原因只有两种：  概念的定义没有明确； 定义这个概念的动机没有明确。  能够精确地书面化、而不是模糊的口语化说出一个概念，并对概念中涉及的其他概念能够递归式的做到，这样可以认为是明确了概念的定义。能够做到知道一个概念是为了解决什么问题而被提出的，它解决了这个问题没有，它带来了什么新问题，就算明白了定义概念">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '6355745518898906000',
+      author: '博主小哥'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/07/05/初学者必须撸清的几个概念/"/>
+
+
+
+
+
+  <title> 初学者必须撸清的几个概念 | 航哥的小站 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">航哥的小站</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">航哥的小站</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            专题
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/05/初学者必须撸清的几个概念/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="szhang">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="航哥的小站">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="航哥的小站" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                初学者必须撸清的几个概念
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表：</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-05T19:27:34+08:00">
+                2017-07-05
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              <span class="post-meta-item-text">更新：</span>
+              <time title="更新：" itemprop="dateModified" datetime="2017-07-05T19:40:22+08:00">
+                2017-07-05
+              </time>
+            
+          </span>
+
+		  
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">专题：</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Big-Data/" itemprop="url" rel="index">
+                    <span itemprop="name">Big Data</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <a href="/2017/07/05/初学者必须撸清的几个概念/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/07/05/初学者必须撸清的几个概念/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/07/05/初学者必须撸清的几个概念/" class="leancloud_visitors" data-flag-title="初学者必须撸清的几个概念">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数： </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote class="blockquote-center"><p>版权声明：文章为博主原创，转载请注明出处。  </p>
+</blockquote>
+<p>在不涉及创新的学习中，我认为学不懂、不会用的原因只有两种：</p>
+<ul>
+<li>概念的定义没有明确；</li>
+<li>定义这个概念的动机没有明确。</li>
+</ul>
+<p>能够精确地书面化、而不是模糊的口语化说出一个概念，并对概念中涉及的其他概念能够递归式的做到，这样可以认为是明确了概念的定义。<br>能够做到知道一个概念是为了解决什么问题而被提出的，它解决了这个问题没有，它带来了什么新问题，就算明白了定义概念的动机。</p>
+<p>在ML学习中，我觉得有几个概念是很重要的，必须明确。</p>
+<hr>
+<h2 id="机器学习三要素"><a href="#机器学习三要素" class="headerlink" title="机器学习三要素"></a>机器学习三要素</h2><p>这个概念在李航的书里明确提出，其他书如西瓜书和PRML都没有这么细的划分。我认为这样的划分更明确，所以这里就采用了，但是具体内容又不和李航的书完全相同。<br><strong>下面我们只谈监督学习，只考虑参数模型。</strong></p>
+<h3 id="1-模型"><a href="#1-模型" class="headerlink" title="1.模型"></a>1.模型</h3><p>按照PRML中，模型有三类：</p>
+<ol>
+<li>$y=f_{\theta } (x)$ ，不涉及概率的数学函数</li>
+<li>$p_{\theta}(y|x)$  ，判别模型</li>
+<li>$p_{\theta}(x,y)$  ，生成模型，一般转化为学习这两个模型：$p(x|y),p(y)$。</li>
+</ol>
+<p>参数模型指在学习之前，必须给出模型的具体表达式，学习的目的就是给出其中的参数。这三种模型学习难度由低到高（表达式参数更多、需要的数据更多），相应的能够表达的信息也是由低到高，模型3可以推出2继续推出1，学习哪种类型模型需要结合实际需求来。</p>
+<h3 id="2-策略"><a href="#2-策略" class="headerlink" title="2. 策略"></a>2. 策略</h3><p>策略也即获得参数的一种套路，大多数情况下，都是将其转化为最优化问题（有约束或无约束）。</p>
+<ol>
+<li>对于$y=f_{\theta } (x)$，一般转化最小平方损失问题(当然也可以用其他损失函数)，比如线性回归的最小二乘法。</li>
+<li>对于$p_{\theta}(y|x)$，一般就是极大对数条件似然函数，比如logit回归。</li>
+<li>对于$p_{\theta}(x,y)$  ，一般就是极大对数联合似然函数（本质上还是极大对数条件似然函数），比如朴素贝叶斯。</li>
+</ol>
+<h3 id="3-算法"><a href="#3-算法" class="headerlink" title="3. 算法"></a>3. 算法</h3><p>算法没什么好说的，最优化问题的一些具体计算方法。</p>
+<hr>
+<h2 id="模型选择"><a href="#模型选择" class="headerlink" title="模型选择"></a>模型选择</h2><h3 id="1-狭义的模型选择"><a href="#1-狭义的模型选择" class="headerlink" title="1. 狭义的模型选择"></a>1. 狭义的模型选择</h3><p>狭义的模型选择指的是对于同一个模型，但参数取不同的个数或者数值。</p>
+<ul>
+<li>模型参数个数不同。比如就是简单的线性回归，我可以取三个系数， $\omega ^{T}=(\omega ^{0},\omega ^{1},\omega ^{2} )$ ，也可以搞四个系数 $\omega ^{T}=(\omega ^{0},\omega ^{1},\omega ^{2} ,\omega ^{3} )$ ，哪个表现更好，就需要我们去选择；</li>
+<li>含有超参数，超参数指需要提前给定的参数。比如还是线性回归，我不按照第一种取不同个数去得到不同模型，现在规定就取100个系数，但是我加一个模型复杂度的罚项，如$ \lambda \omega^ {T} \omega$ ，不同的$\lambda$ ，会导致100个系数中一部分趋于0，这样就获得了跟1类似的效果。</li>
+</ul>
+<h3 id="2-广义的模型选择"><a href="#2-广义的模型选择" class="headerlink" title="2. 广义的模型选择"></a>2. 广义的模型选择</h3><p>模型本身就是不同的，比如二分类问题，可以用logit回归，也可以用决策树，也可以用SVM，它们的理念出发点本身就有很大的差别。</p>
+<h3 id="3-实验选择"><a href="#3-实验选择" class="headerlink" title="3. 实验选择"></a>3. 实验选择</h3><p>模型如何选择，最简单的方法就是实验。在进行实验之前，会引入一个新的概念—验证集，只有在需要进行模型选择的时候才会划分验证集。<br>实验逻辑是这样的：将训练集划分出一部分作为验证集，选出验证集上表现好的模型，然后在全体训练集上重新训练这个模型，最后在测试集上测试其泛化性能。</p>
+<p>不过这里有个问题，就是如果我有用的数据集太小或者说我要搞出一部分数据作为验证，那么有用的训练集就变小了，怎么办？三种处理办法被提了出来：<br><strong>1. 留出法 2. 交叉验证 3.自助法</strong></p>
+<p>有了方法，到底哪个模型是好的，还需要给定评价指标，常用的评价指标有如下三种：<br><strong>1. 错误率，精度 2. 查全率、查准率，P-R图 3. 真正例率、假正例率，ROC曲线</strong></p>
+<p>三种评估方法和评价指标都要记清楚，真正用起来。</p>
+<h3 id="4-理论分析"><a href="#4-理论分析" class="headerlink" title="4. 理论分析"></a>4. 理论分析</h3><p>泛化能力，就是指这个模型对于未知数据的预测能力。实验方法能够告诉我们模型的效果，如果能从理论上解释岂不更好？多层神经网络模型一大诟病就是其可解释性不好。</p>
+<p>学习这块内容需要牢记：某一学习算法，不同的训练集，同一点。</p>
+<ul>
+<li>偏差：学习模型对于真实模型的逼近能力</li>
+<li>方差：学习模型本身有没有很大的波动</li>
+<li>噪声：永远不可能与真实的模型完全一致</li>
+</ul>
+<hr>
+<h2 id="学习理论"><a href="#学习理论" class="headerlink" title="学习理论"></a>学习理论</h2><p>上面第4点其实就属于学习理论的范畴了。</p>
+<p>为什么在训练集上得到的模型可以用于预测？仅仅符合直觉是不够的，还需要理论上证明之。学习理论致力于用数学语言解决以下三个问题：</p>
+<ol>
+<li>如何形式化描述偏差和方差的妥协？(现在过欠拟合问题都是通过试验一点点调整的)</li>
+<li>如何将训练误差与泛化误差联系起来？(只知道训练误差，但其实只在意泛化误差)</li>
+<li>有没有某种条件可以确保某个学习算法一定表现良好？(现在一个问题到底用哪个算法好，总体上都是靠试验来确定的)</li>
+</ol>
+<h3 id="1-PAC学习"><a href="#1-PAC学习" class="headerlink" title="1. PAC学习"></a>1. PAC学习</h3><p>也即从概率角度来解释一个学习模型对真实模型的逼近程度。比如，对于问题2，不是给出一个训练误差与泛化误差差值的范围，而是给出它们差值属于某一范围的概率。</p>
+<h3 id="2-VC维"><a href="#2-VC维" class="headerlink" title="2. VC维"></a>2. VC维</h3><p>如果模型参数连续，那么基本的学习理论就没法使用，VC维就是解决这个问题的。假设给定一组二分类数据集，大小为$d$，那么单看$y$一共有$2^{d}$ 种组合。对于每一种组合，x随便取，只要模型空间存在一个模型能够标记它，那么就说这个模型空间可以打散-shatter这个数据集。而模型空间能够shatter的最大的那个d就是模型空间的VC维。</p>
+<h3 id="3-学习理论的局限性"><a href="#3-学习理论的局限性" class="headerlink" title="3. 学习理论的局限性"></a>3. 学习理论的局限性</h3><p>从Ng的课程知，能够转化为ERM经验风险最小化问题的学习算法，它的泛化误差都是可以理论分析的，但对于non-ERM的学习算法，目前还无能为力，这还是前沿问题。</p>
+<blockquote class="blockquote-center"><p>做了点微小的工作，谢谢大家。   </p>
+</blockquote>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ML/" rel="tag"># ML</a>
+          
+            <a href="/tags/Learning-Theory/" rel="tag"># Learning Theory</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/07/05/读paper，带你看工业界怎么玩ML/" rel="prev" title="读paper，带你看工业界怎么玩ML">
+                读paper，带你看工业界怎么玩ML <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/07/05/初学者必须撸清的几个概念/"
+           data-title="初学者必须撸清的几个概念" data-url="http://yoursite.com/2017/07/05/初学者必须撸清的几个概念/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="szhang" />
+          <p class="site-author-name" itemprop="name">szhang</p>
+          <p class="site-description motion-element" itemprop="description">我想要自由，像呼吸一样渴望。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">32</span>
+              <span class="site-state-item-name">文章</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">专题</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://www.linkedin.com/in/%E6%8C%AF%E8%88%AA-%E5%AD%99-210aa2113/" target="_blank" title="LinkedIn">
+                  
+                    <i class="fa fa-fw fa-linkedin"></i>
+                  
+                  LinkedIn
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/hangsz" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/HANGZS" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              相关链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://zhuanlan.zhihu.com/c_104225745" title="键盘数据侠" target="_blank">键盘数据侠</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://zhuanlan.zhihu.com/solver?author=HANGZS" title="流场求解器初探" target="_blank">流场求解器初探</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://zhuanlan.zhihu.com/c_33038803?author=HANGZS" title="流体探秘" target="_blank">流体探秘</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#机器学习三要素"><span class="nav-number">1.</span> <span class="nav-text">机器学习三要素</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-模型"><span class="nav-number">1.1.</span> <span class="nav-text">1.模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-策略"><span class="nav-number">1.2.</span> <span class="nav-text">2. 策略</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-算法"><span class="nav-number">1.3.</span> <span class="nav-text">3. 算法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模型选择"><span class="nav-number">2.</span> <span class="nav-text">模型选择</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-狭义的模型选择"><span class="nav-number">2.1.</span> <span class="nav-text">1. 狭义的模型选择</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-广义的模型选择"><span class="nav-number">2.2.</span> <span class="nav-text">2. 广义的模型选择</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-实验选择"><span class="nav-number">2.3.</span> <span class="nav-text">3. 实验选择</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-理论分析"><span class="nav-number">2.4.</span> <span class="nav-text">4. 理论分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#学习理论"><span class="nav-number">3.</span> <span class="nav-text">学习理论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-PAC学习"><span class="nav-number">3.1.</span> <span class="nav-text">1. PAC学习</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-VC维"><span class="nav-number">3.2.</span> <span class="nav-text">2. VC维</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-学习理论的局限性"><span class="nav-number">3.3.</span> <span class="nav-text">3. 学习理论的局限性</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">szhang</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+本站总访问量 <span id="busuanzi_value_site_pv"></span> &nbsp&nbsp&nbsp
+您是第<span id="busuanzi_value_site_uv"></span>个来到的小伙伴
+
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"hangsz"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      
+      <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js?v=5.1.0"></script>
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("xSG9qhib9q3QrSXUqm8SfRRK-gzGzoHsz", "5SAppRd4YdPJzHbcoLKeOqfw");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  <script type="text/javascript" src="/js/src/love.js"></script>
+  <script type="text/javascript" src="/js/src/particle.js"></script>
+
+</body>
+</html>
