@@ -5,7 +5,305 @@
         <link>https://hangsz.github.io/</link>
         <description>Recent content on 花半楼</description>
         <generator>Hugo -- gohugo.io</generator>
-        <lastBuildDate>Tue, 10 May 2022 14:45:00 +0000</lastBuildDate><atom:link href="https://hangsz.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 12 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://hangsz.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>2022-05-12_stock</title>
+        <link>https://hangsz.github.io/post/2022-05-12_stock/</link>
+        <pubDate>Thu, 12 May 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://hangsz.github.io/post/2022-05-12_stock/</guid>
+        <description>&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;code&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;name&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;industry&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;industryClassification&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;url&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;trend&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;sh.600025&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;华能水电&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;公用事业&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;申万一级行业&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://xueqiu.com/s/sh600025&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://xueqiu.com/s/sh600025&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;img src=&#34;https://hangsz.github.io/resources%5c2022-05-12%5csh600025.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;1&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;sh.600600&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;青岛啤酒&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;食品饮料&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;申万一级行业&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://xueqiu.com/s/sh600600&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://xueqiu.com/s/sh600600&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;img src=&#34;https://hangsz.github.io/resources%5c2022-05-12%5csh600600.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;sh.600827&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;百联股份&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;商业贸易&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;申万一级行业&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://xueqiu.com/s/sh600827&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://xueqiu.com/s/sh600827&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;img src=&#34;https://hangsz.github.io/resources%5c2022-05-12%5csh600827.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;3&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;sh.601991&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;大唐发电&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;公用事业&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;申万一级行业&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://xueqiu.com/s/sh601991&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://xueqiu.com/s/sh601991&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;img src=&#34;https://hangsz.github.io/resources%5c2022-05-12%5csh601991.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+        </item>
+        <item>
+        <title>2022-05-11_stock</title>
+        <link>https://hangsz.github.io/post/2022-05-11_stock/</link>
+        <pubDate>Wed, 11 May 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://hangsz.github.io/post/2022-05-11_stock/</guid>
+        <description>&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;code&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;name&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;industry&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;industryClassification&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;url&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;trend&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;sh.600528&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;中铁工业&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;机械设备&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;申万一级行业&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://xueqiu.com/s/sh600528&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://xueqiu.com/s/sh600528&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;img src=&#34;https://hangsz.github.io/resources%5c2022-05-11%5csh600528.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;1&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;sh.600536&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;中国软件&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;计算机&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;申万一级行业&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://xueqiu.com/s/sh600536&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://xueqiu.com/s/sh600536&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;img src=&#34;https://hangsz.github.io/resources%5c2022-05-11%5csh600536.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;sh.600597&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;光明乳业&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;食品饮料&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;申万一级行业&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://xueqiu.com/s/sh600597&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://xueqiu.com/s/sh600597&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;img src=&#34;https://hangsz.github.io/resources%5c2022-05-11%5csh600597.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;3&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;sh.600667&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;太极实业&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;电子&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;申万一级行业&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://xueqiu.com/s/sh600667&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://xueqiu.com/s/sh600667&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;img src=&#34;https://hangsz.github.io/resources%5c2022-05-11%5csh600667.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;4&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;sh.601611&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;中国核建&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;建筑装饰&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;申万一级行业&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://xueqiu.com/s/sh601611&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://xueqiu.com/s/sh601611&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;img src=&#34;https://hangsz.github.io/resources%5c2022-05-11%5csh601611.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;5&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;sh.601615&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;明阳智能&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;电气设备&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;申万一级行业&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://xueqiu.com/s/sh601615&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://xueqiu.com/s/sh601615&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;img src=&#34;https://hangsz.github.io/resources%5c2022-05-11%5csh601615.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;6&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;sz.002180&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;纳思达&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;计算机&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;申万一级行业&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://xueqiu.com/s/sz002180&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://xueqiu.com/s/sz002180&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;img src=&#34;https://hangsz.github.io/resources%5c2022-05-11%5csz002180.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;7&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;sz.002399&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;海普瑞&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;医药生物&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;申万一级行业&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://xueqiu.com/s/sz002399&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://xueqiu.com/s/sz002399&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;img src=&#34;https://hangsz.github.io/resources%5c2022-05-11%5csz002399.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+        </item>
+        <item>
+        <title>中宣部公安部联合启动 全民反诈在行动 集中宣传月活动</title>
+        <link>https://hangsz.github.io/post/%E4%B8%AD%E5%AE%A3%E9%83%A8%E5%85%AC%E5%AE%89%E9%83%A8%E8%81%94%E5%90%88%E5%90%AF%E5%8A%A8-%E5%85%A8%E6%B0%91%E5%8F%8D%E8%AF%88%E5%9C%A8%E8%A1%8C%E5%8A%A8-%E9%9B%86%E4%B8%AD%E5%AE%A3%E4%BC%A0%E6%9C%88%E6%B4%BB%E5%8A%A8/</link>
+        <pubDate>Tue, 10 May 2022 19:12:00 +0000</pubDate>
+        
+        <guid>https://hangsz.github.io/post/%E4%B8%AD%E5%AE%A3%E9%83%A8%E5%85%AC%E5%AE%89%E9%83%A8%E8%81%94%E5%90%88%E5%90%AF%E5%8A%A8-%E5%85%A8%E6%B0%91%E5%8F%8D%E8%AF%88%E5%9C%A8%E8%A1%8C%E5%8A%A8-%E9%9B%86%E4%B8%AD%E5%AE%A3%E4%BC%A0%E6%9C%88%E6%B4%BB%E5%8A%A8/</guid>
+        <description>&lt;p&gt;新华社北京5月10日电\u3000为深入贯彻落实习近平总书记重要指示精神和党中央决策部署，贯彻落实中办、国办印发的《关于加强打击治理电信网络诈骗违法犯罪工作的意见》，中宣部、公安部于5月10日联合启动“全民反诈在行动”集中宣传月活动，进一步加强宣传教育，发动群众力量，汇聚群众智慧，营造全民反诈、全社会反诈浓厚氛围。&lt;br&gt;
+根据活动安排，各地各部门将在全国范围内组织开展防范电信网络诈骗违法犯罪系列宣传教育，针对易受骗群体开展精准防范宣传，不断推动反诈防诈知识进社区、进农村、进家庭、进学校、进企业，着力构建全方位、广覆盖的反诈宣传教育体系。主要新闻媒体和新媒体平台将持续推出反诈报道，强化以案说法，普及防骗知识，切实增强群众防骗意识和识骗能力。中宣部、公安部将联合工信部、中国人民银行等有关行业主管部门，对金融机构、电信业务经营者、互联网服务提供者的从业人员及服务对象开展反诈宣传；联合教育部启动“反诈宣传进校园”活动，在全国高校推广建立校园反诈中心，组建大学生反诈志愿者队伍，开展反诈知识进教材、进课堂及反诈知识竞赛等教育宣传活动；联合全国老龄工作委员会开展“老年人防诈宣传”系列活动，编制《老年人防骗手册》，组织全国老年反诈知识竞赛等，持续掀起宣传教育热潮。&lt;br&gt;
+据了解，一年来，在以习近平同志为核心的党中央坚强领导下，各地区各部门各行业牢固树立以人民为中心的发展思想，狠抓打防管控各项措施和行业监管主体责任落实，推动打击治理电信网络诈骗违法犯罪工作取得明显成效。全国公安机关勇于担当作为、忠实履职尽责，持续开展“云剑”“长城”“断卡”“断流”等专项行动，先后组织全国集群战役150次，共侦破电信网络诈骗案件39.4万起，抓获违法犯罪嫌疑人63.4万名，同比分别上升28.5%、76.6%。&lt;br&gt;
+在强有力的严打高压震慑下，全国电信网络诈骗案件快速上升的势头得到有效遏制，一年来公安机关立案数同比下降18.7%。国家反诈中心会同有关部门全力构筑防止群众被骗的“防火墙”，直接推送预警指令4060余万条，各地推出预警线索4170万条，紧急止付涉案资金3290余亿元，成功避免6170余万名群众被骗。各地区各部门各行业将坚持打防结合、防范为先，切实形成齐抓共管、群防群治的整体合力，营造全民反诈、全社会反诈的强大声势，坚决遏制电信网络诈骗违法犯罪多发高发态势，有力维护人民群众财产安全和合法权益。&lt;br&gt;
+分享让更多人看到&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>两部门联合发布2021年 最美基层高校毕业生 先进事迹</title>
+        <link>https://hangsz.github.io/post/%E4%B8%A4%E9%83%A8%E9%97%A8%E8%81%94%E5%90%88%E5%8F%91%E5%B8%832021%E5%B9%B4-%E6%9C%80%E7%BE%8E%E5%9F%BA%E5%B1%82%E9%AB%98%E6%A0%A1%E6%AF%95%E4%B8%9A%E7%94%9F-%E5%85%88%E8%BF%9B%E4%BA%8B%E8%BF%B9/</link>
+        <pubDate>Tue, 10 May 2022 18:45:00 +0000</pubDate>
+        
+        <guid>https://hangsz.github.io/post/%E4%B8%A4%E9%83%A8%E9%97%A8%E8%81%94%E5%90%88%E5%8F%91%E5%B8%832021%E5%B9%B4-%E6%9C%80%E7%BE%8E%E5%9F%BA%E5%B1%82%E9%AB%98%E6%A0%A1%E6%AF%95%E4%B8%9A%E7%94%9F-%E5%85%88%E8%BF%9B%E4%BA%8B%E8%BF%B9/</guid>
+        <description>&lt;p&gt;新华社北京5月10日电 为深入学习贯彻习近平总书记关于青年工作的重要思想，引导和鼓励广大高校毕业生积极响应党和国家号召，勇于到基层一线和艰苦边远地区建功立业，努力成为堪当民族复兴重任的时代新人，近日，中央宣传部、人力资源和社会保障部联合发布20名2021年“最美基层高校毕业生”先进事迹。&lt;br&gt;
+王海洋、史晓刚、刘攀飞、杨晓帅、吴书香、沈富琼、张可、陈玮、林文婕、和倩如、赵剑、秦倩、袁辉、高承龙、郭慧慧、龚钰犇、崔久秀、雍朝斌、戴贝贝、魏静等20名“最美基层高校毕业生”，是新时代基层高校毕业生的优秀代表。他们有的在脱贫攻坚和乡村振兴一线带领群众脱贫致富，有的投身疫情防控和卫生健康事业守护人民生命安全，有的坚守三尺讲台倾情奉献乡村教育，有的科技报国矢志创新攻克技术难关，还有的扎根司法援助、就业帮扶、农业生产、志愿服务等基层一线，在解决群众急难愁盼问题、推进民生事业发展中作出突出贡献，用实际行动诠释了“小我融入大我，青春献给祖国”的责任担当，成为“到基层去、到祖国最需要的地方去”的优秀榜样。&lt;br&gt;
+发布仪式以“让青春之花绽放在祖国最需要的地方”为主题，20名“最美基层高校毕业生”围绕学习贯彻“志存高远、脚踏实地，不畏艰难险阻，勇担时代使命”要求，用亲身经历讲述了基层奉献、成长成才、至诚报国的感人故事。中央宣传部、人力资源和社会保障部负责同志为他们颁发了“最美基层高校毕业生”证书。&lt;br&gt;
+分享让更多人看到&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>中宣部、人社部联合发布2021年 最美基层高校毕业生 先进事迹 综述(上)</title>
+        <link>https://hangsz.github.io/post/%E4%B8%AD%E5%AE%A3%E9%83%A8%E4%BA%BA%E7%A4%BE%E9%83%A8%E8%81%94%E5%90%88%E5%8F%91%E5%B8%832021%E5%B9%B4-%E6%9C%80%E7%BE%8E%E5%9F%BA%E5%B1%82%E9%AB%98%E6%A0%A1%E6%AF%95%E4%B8%9A%E7%94%9F-%E5%85%88%E8%BF%9B%E4%BA%8B%E8%BF%B9-%E7%BB%BC%E8%BF%B0%E4%B8%8A/</link>
+        <pubDate>Tue, 10 May 2022 18:45:00 +0000</pubDate>
+        
+        <guid>https://hangsz.github.io/post/%E4%B8%AD%E5%AE%A3%E9%83%A8%E4%BA%BA%E7%A4%BE%E9%83%A8%E8%81%94%E5%90%88%E5%8F%91%E5%B8%832021%E5%B9%B4-%E6%9C%80%E7%BE%8E%E5%9F%BA%E5%B1%82%E9%AB%98%E6%A0%A1%E6%AF%95%E4%B8%9A%E7%94%9F-%E5%85%88%E8%BF%9B%E4%BA%8B%E8%BF%B9-%E7%BB%BC%E8%BF%B0%E4%B8%8A/</guid>
+        <description>&lt;p&gt;新华社北京5月10日电 为深入学习贯彻习近平总书记关于青年工作的重要思想，引导和鼓励广大高校毕业生积极响应党和国家号召，勇于到基层一线和艰苦边远地区建功立业，努力成为堪当民族复兴重任的时代新人，近日，中央宣传部、人力资源和社会保障部联合发布20名2021年“最美基层高校毕业生”先进事迹。&lt;br&gt;
+王海洋、史晓刚、刘攀飞、杨晓帅、吴书香、沈富琼、张可、陈玮、林文婕、和倩如、赵剑、秦倩、袁辉、高承龙、郭慧慧、龚钰犇、崔久秀、雍朝斌、戴贝贝、魏静等20名“最美基层高校毕业生”，是新时代基层高校毕业生的优秀代表。他们有的在脱贫攻坚和乡村振兴一线带领群众脱贫致富，有的投身疫情防控和卫生健康事业守护人民生命安全，有的坚守三尺讲台倾情奉献乡村教育，有的科技报国矢志创新攻克技术难关，还有的扎根司法援助、就业帮扶、农业生产、志愿服务等基层一线，在解决群众急难愁盼问题、推进民生事业发展中作出突出贡献，用实际行动诠释了“小我融入大我，青春献给祖国”的责任担当，成为“到基层去、到祖国最需要的地方去”的优秀榜样。&lt;br&gt;
+发布仪式以“让青春之花绽放在祖国最需要的地方”为主题，20名“最美基层高校毕业生”围绕学习贯彻“志存高远、脚踏实地，不畏艰难险阻，勇担时代使命”要求，用亲身经历讲述了基层奉献、成长成才、至诚报国的感人故事。中央宣传部、人力资源和社会保障部负责同志为他们颁发了“最美基层高校毕业生”证书。&lt;br&gt;
+分享让更多人看到&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>国务院台办出台若干措施支持浙江高质量发展建设共同富裕示范区</title>
+        <link>https://hangsz.github.io/post/%E5%9B%BD%E5%8A%A1%E9%99%A2%E5%8F%B0%E5%8A%9E%E5%87%BA%E5%8F%B0%E8%8B%A5%E5%B9%B2%E6%8E%AA%E6%96%BD%E6%94%AF%E6%8C%81%E6%B5%99%E6%B1%9F%E9%AB%98%E8%B4%A8%E9%87%8F%E5%8F%91%E5%B1%95%E5%BB%BA%E8%AE%BE%E5%85%B1%E5%90%8C%E5%AF%8C%E8%A3%95%E7%A4%BA%E8%8C%83%E5%8C%BA/</link>
+        <pubDate>Tue, 10 May 2022 16:15:00 +0000</pubDate>
+        
+        <guid>https://hangsz.github.io/post/%E5%9B%BD%E5%8A%A1%E9%99%A2%E5%8F%B0%E5%8A%9E%E5%87%BA%E5%8F%B0%E8%8B%A5%E5%B9%B2%E6%8E%AA%E6%96%BD%E6%94%AF%E6%8C%81%E6%B5%99%E6%B1%9F%E9%AB%98%E8%B4%A8%E9%87%8F%E5%8F%91%E5%B1%95%E5%BB%BA%E8%AE%BE%E5%85%B1%E5%90%8C%E5%AF%8C%E8%A3%95%E7%A4%BA%E8%8C%83%E5%8C%BA/</guid>
+        <description>&lt;p&gt;新华社北京5月10日电 国务院台办近期出台《国务院台办关于支持浙江高质量发展建设共同富裕示范区的若干措施》（简称“若干措施”），进一步支持浙江对台工作开展，服务共同富裕示范区建设。&lt;br&gt;
+“若干措施”包含4方面内容、12项具体举措，明确国务院台办将支持浙江打造两岸产业合作及对台交流新平台，深化浙台各领域交流，推动台胞台企参与浙江高质量发展和共同富裕示范区建设。同时，国务院台办将支持浙江强化工作保障，开展涉台法治工作及对台工作数字化改革。&lt;br&gt;
+分享让更多人看到&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>中宣部、公安部联合启动 全民反诈在行动 集中宣传月活动</title>
         <link>https://hangsz.github.io/post/%E4%B8%AD%E5%AE%A3%E9%83%A8%E5%85%AC%E5%AE%89%E9%83%A8%E8%81%94%E5%90%88%E5%90%AF%E5%8A%A8-%E5%85%A8%E6%B0%91%E5%8F%8D%E8%AF%88%E5%9C%A8%E8%A1%8C%E5%8A%A8-%E9%9B%86%E4%B8%AD%E5%AE%A3%E4%BC%A0%E6%9C%88%E6%B4%BB%E5%8A%A8/</link>
         <pubDate>Tue, 10 May 2022 14:45:00 +0000</pubDate>
