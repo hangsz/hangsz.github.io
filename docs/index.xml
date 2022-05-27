@@ -19,7 +19,6 @@
 &lt;th style=&#34;text-align:left&#34;&gt;name&lt;/th&gt;
 &lt;th style=&#34;text-align:left&#34;&gt;industry&lt;/th&gt;
 &lt;th style=&#34;text-align:left&#34;&gt;industryClassification&lt;/th&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;url&lt;/th&gt;
 &lt;th style=&#34;text-align:left&#34;&gt;trend&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
@@ -27,11 +26,10 @@
 &lt;tr&gt;
 &lt;td style=&#34;text-align:right&#34;&gt;0&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;sh.600028&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;中国石化&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://xueqiu.com/s/sh600028&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;中国石化&lt;/a&gt;&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;化工&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;申万一级行业&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://xueqiu.com/s/sh600028&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://xueqiu.com/s/sh600028&lt;/a&gt;&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;&lt;img src=&#34;https://hangsz.github.io/stock/2022-05-27/sh600028.png&#34;
 	
 	
@@ -44,11 +42,10 @@
 &lt;tr&gt;
 &lt;td style=&#34;text-align:right&#34;&gt;1&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;sh.601857&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;中国石油&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://xueqiu.com/s/sh601857&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;中国石油&lt;/a&gt;&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;采掘&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;申万一级行业&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://xueqiu.com/s/sh601857&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://xueqiu.com/s/sh601857&lt;/a&gt;&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;&lt;img src=&#34;https://hangsz.github.io/stock/2022-05-27/sh601857.png&#34;
 	
 	
@@ -61,11 +58,10 @@
 &lt;tr&gt;
 &lt;td style=&#34;text-align:right&#34;&gt;2&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;sz.000063&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;中兴通讯&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://xueqiu.com/s/sz000063&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;中兴通讯&lt;/a&gt;&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;通信&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;申万一级行业&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://xueqiu.com/s/sz000063&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://xueqiu.com/s/sz000063&lt;/a&gt;&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;&lt;img src=&#34;https://hangsz.github.io/stock/2022-05-27/sz000063.png&#34;
 	
 	
@@ -78,11 +74,10 @@
 &lt;tr&gt;
 &lt;td style=&#34;text-align:right&#34;&gt;3&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;sh.600642&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;申能股份&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://xueqiu.com/s/sh600642&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;申能股份&lt;/a&gt;&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;公用事业&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;申万一级行业&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://xueqiu.com/s/sh600642&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://xueqiu.com/s/sh600642&lt;/a&gt;&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;&lt;img src=&#34;https://hangsz.github.io/stock/2022-05-27/sh600642.png&#34;
 	
 	
@@ -95,11 +90,10 @@
 &lt;tr&gt;
 &lt;td style=&#34;text-align:right&#34;&gt;4&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;sh.600859&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;王府井&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://xueqiu.com/s/sh600859&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;王府井&lt;/a&gt;&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;商业贸易&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;申万一级行业&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://xueqiu.com/s/sh600859&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://xueqiu.com/s/sh600859&lt;/a&gt;&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;&lt;img src=&#34;https://hangsz.github.io/stock/2022-05-27/sh600859.png&#34;
 	
 	
