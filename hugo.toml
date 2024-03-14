@@ -1,4 +1,4 @@
 baseURL = 'https://hangsz.github.io/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = 'ananke'
+languageCode = 'zh-cn'
+title = '花半楼'
+theme = 'hugo-theme-stack'
