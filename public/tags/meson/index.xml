@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Meson on 花半楼</title>
+        <link>http://localhost:6984/tags/meson/</link>
+        <description>Recent content in Meson on 花半楼</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Sun, 17 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:6984/tags/meson/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>撸毛加餐 2.meson network项目</title>
+        <link>http://localhost:6984/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-2.meson-network%E9%A1%B9%E7%9B%AE/</link>
+        <pubDate>Sun, 17 Mar 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:6984/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-2.meson-network%E9%A1%B9%E7%9B%AE/</guid>
+        <description>&lt;h1 id=&#34;说明&#34;&gt;说明&lt;/h1&gt;
+&lt;p&gt;需要社交账户交互，花费0$。
+需要本地挖矿，测试网换币，花费0$&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.meson.network/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;官网链接&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;0-项目介绍&#34;&gt;0. 项目介绍&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:6984/airdrop/meson.network-rootdata.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;项目介绍&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;1-注册&#34;&gt;1. 注册&lt;/h1&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://dashboard.gaganode.com/register?referral_code=lmbfcbcrznhzgxp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;注册链接&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:6984/airdrop/meson.network-1.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;2-完成社交任务&#34;&gt;2. 完成社交任务&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:6984/airdrop/meson.network-2.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;3-本地挖矿&#34;&gt;3. 本地挖矿&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:6984/airdrop/meson.network-3.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;4-绑定钱包&#34;&gt;4. 绑定钱包&lt;/h1&gt;
+&lt;p&gt;选择OKX Wallet就行
+&lt;img src=&#34;http://localhost:6984/airdrop/meson.network-4.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;5-兑换为测试网币&#34;&gt;5. 兑换为测试网币&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;领水&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;领水的意思是在一些标准的测试网上领取免费测试币，这里领取的是ETH, 用于手续费&lt;/li&gt;
+&lt;li&gt;把自己以太账户的地址拷贝过来进去，需要先登录下(用谷歌账户)&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.alchemy.com/faucets/ethereum-sepolia&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;领水链接&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;兑换
+在下面页面，点击Exchange -&amp;gt; 继续点击 -&amp;gt; 输入想兑换的数量 Meson Reward Count -&amp;gt; 确认-&amp;gt; 钱包弹出确认
+&lt;img src=&#34;http://localhost:6984/airdrop/meson.network-51.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;币种添加
+在钱包首页，点击币种管理 -&amp;gt; 自定义币种 -&amp;gt; 网络Sepolia, 合约地址 0xde939833Ed21FE3833d3d9E545dC7Faa9F161D06
+&lt;img src=&#34;http://localhost:6984/airdrop/meson.network-52.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;钱包查看MSN币数量&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

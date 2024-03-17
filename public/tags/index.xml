@@ -2,24 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Tags on 花半楼</title>
-        <link>https://hangsz.github.io/tags/</link>
+        <link>http://localhost:6984/tags/</link>
         <description>Recent content in Tags on 花半楼</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Sun, 17 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://hangsz.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 17 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:6984/tags/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Analog</title>
-        <link>https://hangsz.github.io/tags/analog/</link>
+        <link>http://localhost:6984/tags/analog/</link>
         <pubDate>Sun, 17 Mar 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://hangsz.github.io/tags/analog/</guid>
+        <guid>http://localhost:6984/tags/analog/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>ETH生态</title>
+        <link>http://localhost:6984/tags/eth%E7%94%9F%E6%80%81/</link>
+        <pubDate>Sun, 17 Mar 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:6984/tags/eth%E7%94%9F%E6%80%81/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Meson</title>
+        <link>http://localhost:6984/tags/meson/</link>
+        <pubDate>Sun, 17 Mar 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:6984/tags/meson/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>基础设施</title>
+        <link>http://localhost:6984/tags/%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD/</link>
+        <pubDate>Sun, 17 Mar 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:6984/tags/%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD/</guid>
         <description></description>
         </item>
         <item>
         <title>钱包/账户</title>
-        <link>https://hangsz.github.io/tags/%E9%92%B1%E5%8C%85/%E8%B4%A6%E6%88%B7/</link>
+        <link>http://localhost:6984/tags/%E9%92%B1%E5%8C%85/%E8%B4%A6%E6%88%B7/</link>
         <pubDate>Sun, 17 Mar 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://hangsz.github.io/tags/%E9%92%B1%E5%8C%85/%E8%B4%A6%E6%88%B7/</guid>
+        <guid>http://localhost:6984/tags/%E9%92%B1%E5%8C%85/%E8%B4%A6%E6%88%B7/</guid>
         <description></description>
         </item>
         

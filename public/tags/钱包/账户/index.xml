@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>钱包/账户 on 花半楼</title>
-        <link>https://hangsz.github.io/tags/%E9%92%B1%E5%8C%85/%E8%B4%A6%E6%88%B7/</link>
+        <link>http://localhost:6984/tags/%E9%92%B1%E5%8C%85/%E8%B4%A6%E6%88%B7/</link>
         <description>Recent content in 钱包/账户 on 花半楼</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Sun, 17 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://hangsz.github.io/tags/%E9%92%B1%E5%8C%85/%E8%B4%A6%E6%88%B7/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 17 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:6984/tags/%E9%92%B1%E5%8C%85/%E8%B4%A6%E6%88%B7/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>撸毛加餐 0.钱包和账号等准备</title>
-        <link>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-0.%E9%92%B1%E5%8C%85%E5%92%8C%E8%B4%A6%E5%8F%B7%E7%AD%89%E5%87%86%E5%A4%87/</link>
+        <link>http://localhost:6984/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-0.%E9%92%B1%E5%8C%85%E5%92%8C%E8%B4%A6%E5%8F%B7%E7%AD%89%E5%87%86%E5%A4%87/</link>
         <pubDate>Sun, 17 Mar 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-0.%E9%92%B1%E5%8C%85%E5%92%8C%E8%B4%A6%E5%8F%B7%E7%AD%89%E5%87%86%E5%A4%87/</guid>
+        <guid>http://localhost:6984/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-0.%E9%92%B1%E5%8C%85%E5%92%8C%E8%B4%A6%E5%8F%B7%E7%AD%89%E5%87%86%E5%A4%87/</guid>
         <description>&lt;h1 id=&#34;0-kexueshangwang&#34;&gt;0. kexueshangwang&lt;/h1&gt;
 &lt;p&gt;买个vpn就行，不会的私我, 很简单&lt;/p&gt;
 &lt;h1 id=&#34;1-二次验证&#34;&gt;1. 二次验证&lt;/h1&gt;

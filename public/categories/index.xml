@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Categories on 花半楼</title>
-        <link>https://hangsz.github.io/categories/</link>
+        <link>http://localhost:6984/categories/</link>
         <description>Recent content in Categories on 花半楼</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Sun, 17 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://hangsz.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 17 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:6984/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>空投</title>
-        <link>https://hangsz.github.io/categories/%E7%A9%BA%E6%8A%95/</link>
+        <link>http://localhost:6984/categories/%E7%A9%BA%E6%8A%95/</link>
         <pubDate>Sun, 17 Mar 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://hangsz.github.io/categories/%E7%A9%BA%E6%8A%95/</guid>
+        <guid>http://localhost:6984/categories/%E7%A9%BA%E6%8A%95/</guid>
         <description></description>
         </item>
         <item>
         <title>区块链</title>
-        <link>https://hangsz.github.io/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/</link>
+        <link>http://localhost:6984/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/</link>
         <pubDate>Sun, 17 Mar 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://hangsz.github.io/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/</guid>
+        <guid>http://localhost:6984/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/</guid>
         <description></description>
         </item>
         
