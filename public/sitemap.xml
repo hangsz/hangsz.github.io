@@ -2,28 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://hangsz.github.io/</loc>
+    <loc>http://localhost:5793/</loc>
     <lastmod>2024-03-12T21:18:46+08:00</lastmod>
   </url><url>
-    <loc>https://hangsz.github.io/post/my-first-postcopy/</loc>
+    <loc>http://localhost:5793/post/my-first-postcopy/</loc>
     <lastmod>2024-03-12T21:18:46+08:00</lastmod>
   </url><url>
-    <loc>https://hangsz.github.io/post/</loc>
+    <loc>http://localhost:5793/post/</loc>
     <lastmod>2024-03-12T21:18:46+08:00</lastmod>
   </url><url>
-    <loc>https://hangsz.github.io/post/my-first-post/</loc>
+    <loc>http://localhost:5793/post/my-first-post/</loc>
     <lastmod>2024-03-12T12:18:46+08:00</lastmod>
   </url><url>
-    <loc>https://hangsz.github.io/archives/</loc>
+    <loc>http://localhost:5793/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hangsz.github.io/about/</loc>
-    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+    <loc>http://localhost:5793/categories/</loc>
   </url><url>
-    <loc>https://hangsz.github.io/_index.zh-cn/</loc>
+    <loc>http://localhost:5793/tags/</loc>
   </url><url>
-    <loc>https://hangsz.github.io/categories/</loc>
-  </url><url>
-    <loc>https://hangsz.github.io/tags/</loc>
+    <loc>http://localhost:5793/about/</loc>
   </url>
 </urlset>

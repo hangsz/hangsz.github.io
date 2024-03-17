@@ -2,3 +2,5 @@ baseURL = 'https://hangsz.github.io/'
 languageCode = 'zh-cn'
 title = '花半楼'
 theme = 'hugo-theme-stack'
+
+DefaultContentLanguage = "zh-cn"
