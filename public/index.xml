@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>花半楼</title>
-        <link>http://localhost:6984/</link>
+        <link>https://hangsz.github.io/</link>
         <description>Recent content on 花半楼</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Sun, 17 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:6984/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 17 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://hangsz.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>撸毛加餐 0.钱包和账号等准备</title>
-        <link>http://localhost:6984/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-0.%E9%92%B1%E5%8C%85%E5%92%8C%E8%B4%A6%E5%8F%B7%E7%AD%89%E5%87%86%E5%A4%87/</link>
+        <link>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-0.%E9%92%B1%E5%8C%85%E5%92%8C%E8%B4%A6%E5%8F%B7%E7%AD%89%E5%87%86%E5%A4%87/</link>
         <pubDate>Sun, 17 Mar 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:6984/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-0.%E9%92%B1%E5%8C%85%E5%92%8C%E8%B4%A6%E5%8F%B7%E7%AD%89%E5%87%86%E5%A4%87/</guid>
+        <guid>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-0.%E9%92%B1%E5%8C%85%E5%92%8C%E8%B4%A6%E5%8F%B7%E7%AD%89%E5%87%86%E5%A4%87/</guid>
         <description>&lt;h1 id=&#34;0-kexueshangwang&#34;&gt;0. kexueshangwang&lt;/h1&gt;
 &lt;p&gt;买个vpn就行，不会的私我, 很简单&lt;/p&gt;
 &lt;h1 id=&#34;1-二次验证&#34;&gt;1. 二次验证&lt;/h1&gt;
@@ -30,6 +30,12 @@
     &gt;火币&lt;/a&gt; 火币才回归，可正常注册，可能会有活动&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;code&gt;注意: 保护好账号密码、谷歌二次验证二维码等&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;C2C交易&lt;/strong&gt;
+所谓C2C交易就是人民币&amp;lt;-&amp;gt;虚拟币，进场和出场&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;币安APP主页 -&amp;gt; 交易-&amp;gt; C2C -&amp;gt; 自选区或者快捷区，新手可以快捷买币，第一次小额买体验下&lt;/li&gt;
+&lt;li&gt;欧易APP主页 -&amp;gt; 买币-&amp;gt; C2C买币或者快捷买币，新手可以快捷买币，第一次小额买体验下&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h1 id=&#34;3-钱包账户&#34;&gt;3. 钱包账户&lt;/h1&gt;
 &lt;p&gt;安装两个钱包一般就够了, chrome或者edge浏览器安装:&lt;/p&gt;
 &lt;ul&gt;
@@ -47,17 +53,17 @@
         </item>
         <item>
         <title>撸毛加餐 1.analog项目</title>
-        <link>http://localhost:6984/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-1.analog%E9%A1%B9%E7%9B%AE/</link>
+        <link>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-1.analog%E9%A1%B9%E7%9B%AE/</link>
         <pubDate>Sun, 17 Mar 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:6984/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-1.analog%E9%A1%B9%E7%9B%AE/</guid>
+        <guid>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-1.analog%E9%A1%B9%E7%9B%AE/</guid>
         <description>&lt;h1 id=&#34;说明&#34;&gt;说明&lt;/h1&gt;
 &lt;p&gt;不需要钱包交互，只需要社交账户交互，花费0$。&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.analog.one/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;官网链接&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;0-项目介绍&#34;&gt;0. 项目介绍&lt;/h1&gt;
 &lt;p&gt;有大额融资
-&lt;img src=&#34;http://localhost:6984/airdrop/analog-rootdata.png&#34;
+&lt;img src=&#34;https://hangsz.github.io/airdrop/analog-rootdata.png&#34;
 	
 	
 	
@@ -68,7 +74,7 @@
 &lt;h1 id=&#34;1-注册&#34;&gt;1. 注册&lt;/h1&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://swee.ps/UkBJBQ_mSrtqo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;注册链接&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:6984/airdrop/analog-1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://hangsz.github.io/airdrop/analog-1.png&#34;
 	
 	
 	
@@ -77,7 +83,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h1 id=&#34;2-完成答题任务&#34;&gt;2. 完成答题任务&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:6984/airdrop/analog-2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://hangsz.github.io/airdrop/analog-2.png&#34;
 	
 	
 	
@@ -89,17 +95,17 @@
         </item>
         <item>
         <title>撸毛加餐 2.meson network项目</title>
-        <link>http://localhost:6984/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-2.meson-network%E9%A1%B9%E7%9B%AE/</link>
+        <link>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-2.meson-network%E9%A1%B9%E7%9B%AE/</link>
         <pubDate>Sun, 17 Mar 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:6984/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-2.meson-network%E9%A1%B9%E7%9B%AE/</guid>
+        <guid>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-2.meson-network%E9%A1%B9%E7%9B%AE/</guid>
         <description>&lt;h1 id=&#34;说明&#34;&gt;说明&lt;/h1&gt;
 &lt;p&gt;需要社交账户交互，花费0$。
 需要本地挖矿，测试网换币，花费0$&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.meson.network/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;官网链接&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;0-项目介绍&#34;&gt;0. 项目介绍&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:6984/airdrop/meson.network-rootdata.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://hangsz.github.io/airdrop/meson.network-rootdata.png&#34;
 	
 	
 	
@@ -112,7 +118,7 @@
 &lt;h1 id=&#34;1-注册&#34;&gt;1. 注册&lt;/h1&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://dashboard.gaganode.com/register?referral_code=lmbfcbcrznhzgxp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;注册链接&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:6984/airdrop/meson.network-1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://hangsz.github.io/airdrop/meson.network-1.png&#34;
 	
 	
 	
@@ -121,7 +127,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h1 id=&#34;2-完成社交任务&#34;&gt;2. 完成社交任务&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:6984/airdrop/meson.network-2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://hangsz.github.io/airdrop/meson.network-2.png&#34;
 	
 	
 	
@@ -130,7 +136,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h1 id=&#34;3-本地挖矿&#34;&gt;3. 本地挖矿&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:6984/airdrop/meson.network-3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://hangsz.github.io/airdrop/meson.network-3.png&#34;
 	
 	
 	
@@ -140,7 +146,7 @@
 &gt;&lt;/p&gt;
 &lt;h1 id=&#34;4-绑定钱包&#34;&gt;4. 绑定钱包&lt;/h1&gt;
 &lt;p&gt;选择OKX Wallet就行
-&lt;img src=&#34;http://localhost:6984/airdrop/meson.network-4.png&#34;
+&lt;img src=&#34;https://hangsz.github.io/airdrop/meson.network-4.png&#34;
 	
 	
 	
@@ -162,7 +168,7 @@
 &lt;li&gt;
 &lt;p&gt;兑换
 在下面页面，点击Exchange -&amp;gt; 继续点击 -&amp;gt; 输入想兑换的数量 Meson Reward Count -&amp;gt; 确认-&amp;gt; 钱包弹出确认
-&lt;img src=&#34;http://localhost:6984/airdrop/meson.network-51.png&#34;
+&lt;img src=&#34;https://hangsz.github.io/airdrop/meson.network-51.png&#34;
 	
 	
 	
@@ -174,7 +180,7 @@
 &lt;li&gt;
 &lt;p&gt;币种添加
 在钱包首页，点击币种管理 -&amp;gt; 自定义币种 -&amp;gt; 网络Sepolia, 合约地址 0xde939833Ed21FE3833d3d9E545dC7Faa9F161D06
-&lt;img src=&#34;http://localhost:6984/airdrop/meson.network-52.png&#34;
+&lt;img src=&#34;https://hangsz.github.io/airdrop/meson.network-52.png&#34;
 	
 	
 	
@@ -191,18 +197,18 @@
         </item>
         <item>
         <title>归档</title>
-        <link>http://localhost:6984/archives/</link>
+        <link>https://hangsz.github.io/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:6984/archives/</guid>
+        <guid>https://hangsz.github.io/archives/</guid>
         <description></description>
         </item>
         <item>
         <title>关于</title>
-        <link>http://localhost:6984/about/</link>
+        <link>https://hangsz.github.io/about/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:6984/about/</guid>
+        <guid>https://hangsz.github.io/about/</guid>
         <description>&lt;p&gt;This is a test page for i18n support.&lt;/p&gt;
 </description>
         </item>
