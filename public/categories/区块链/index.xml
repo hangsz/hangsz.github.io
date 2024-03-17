@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Posts on 花半楼</title>
-        <link>http://localhost:11317/post/</link>
-        <description>Recent content in Posts on 花半楼</description>
+        <title>区块链 on 花半楼</title>
+        <link>http://localhost:11317/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/</link>
+        <description>Recent content in 区块链 on 花半楼</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Sun, 17 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:11317/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 17 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:11317/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/index.xml" rel="self" type="application/rss+xml" /><item>
         <title></title>
         <link>http://localhost:11317/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-0.%E9%92%B1%E5%8C%85%E5%92%8C%E8%B4%A6%E5%8F%B7%E7%AD%89%E5%87%86%E5%A4%87/</link>
         <pubDate>Sun, 17 Mar 2024 00:00:00 +0000</pubDate>
