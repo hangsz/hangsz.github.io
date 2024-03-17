@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Categories on 花半楼</title>
-        <link>http://localhost:11317/categories/</link>
+        <link>http://localhost:12689/categories/</link>
         <description>Recent content in Categories on 花半楼</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Sun, 17 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:11317/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 17 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:12689/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Analog</title>
-        <link>http://localhost:11317/categories/analog/</link>
+        <link>http://localhost:12689/categories/analog/</link>
         <pubDate>Sun, 17 Mar 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:11317/categories/analog/</guid>
+        <guid>http://localhost:12689/categories/analog/</guid>
         <description></description>
         </item>
         <item>
         <title>空投</title>
-        <link>http://localhost:11317/categories/%E7%A9%BA%E6%8A%95/</link>
+        <link>http://localhost:12689/categories/%E7%A9%BA%E6%8A%95/</link>
         <pubDate>Sun, 17 Mar 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:11317/categories/%E7%A9%BA%E6%8A%95/</guid>
+        <guid>http://localhost:12689/categories/%E7%A9%BA%E6%8A%95/</guid>
         <description></description>
         </item>
         <item>
         <title>区块链</title>
-        <link>http://localhost:11317/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/</link>
+        <link>http://localhost:12689/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/</link>
         <pubDate>Sun, 17 Mar 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:11317/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/</guid>
+        <guid>http://localhost:12689/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/</guid>
         <description></description>
         </item>
         <item>
         <title>账户管理</title>
-        <link>http://localhost:11317/categories/%E8%B4%A6%E6%88%B7%E7%AE%A1%E7%90%86/</link>
+        <link>http://localhost:12689/categories/%E8%B4%A6%E6%88%B7%E7%AE%A1%E7%90%86/</link>
         <pubDate>Sun, 17 Mar 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:11317/categories/%E8%B4%A6%E6%88%B7%E7%AE%A1%E7%90%86/</guid>
+        <guid>http://localhost:12689/categories/%E8%B4%A6%E6%88%B7%E7%AE%A1%E7%90%86/</guid>
         <description></description>
         </item>
         
