@@ -624,7 +624,12 @@
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://hangsz.github.io/about/</guid>
-        <description>&lt;p&gt;This is a test page for i18n support.&lt;/p&gt;
+        <description>&lt;p&gt;斜杠青年(自认)一枚:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;七年老码农&lt;/li&gt;
+&lt;li&gt;七年老韭菜&lt;/li&gt;
+&lt;li&gt;撸毛爱好者&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         </item>
         

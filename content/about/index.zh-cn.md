@@ -7,4 +7,7 @@ menu:
             icon: user
 ---
 
-This is a test page for i18n support.
+斜杠青年(自认)一枚:
+- 七年老码农
+- 七年老韭菜
+- 撸毛爱好者
