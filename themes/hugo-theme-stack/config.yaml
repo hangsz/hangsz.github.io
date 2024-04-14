@@ -171,8 +171,14 @@ menu:
           url: https://github.com/hangsz
           params:
               icon: github
-
+              
         - identifier: twitter
+          name: Twitter
+          url: https://twitter.com/huabanlou
+          params:
+              icon: brand-x
+
+        - identifier: zhihu
           name: 知乎
           url: https://www.zhihu.com/people/HANGZS
           params:
