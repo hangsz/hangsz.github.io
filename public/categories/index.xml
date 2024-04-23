@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Categories on 花半楼</title>
+        <title>Test on 花半楼</title>
         <link>https://hangsz.github.io/categories/</link>
-        <description>Recent content in Categories on 花半楼</description>
+        <description>Recent content in Test on 花半楼</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Sat, 30 Mar 2024 02:00:00 +0000</lastBuildDate><atom:link href="https://hangsz.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 23 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://hangsz.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>BTC生态</title>
+        <link>https://hangsz.github.io/categories/btc%E7%94%9F%E6%80%81/</link>
+        <pubDate>Tue, 23 Apr 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://hangsz.github.io/categories/btc%E7%94%9F%E6%80%81/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>名牌空投</title>
+        <link>https://hangsz.github.io/categories/%E5%90%8D%E7%89%8C%E7%A9%BA%E6%8A%95/</link>
+        <pubDate>Tue, 23 Apr 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://hangsz.github.io/categories/%E5%90%8D%E7%89%8C%E7%A9%BA%E6%8A%95/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>大毛预期</title>
         <link>https://hangsz.github.io/categories/%E5%A4%A7%E6%AF%9B%E9%A2%84%E6%9C%9F/</link>
         <pubDate>Sat, 30 Mar 2024 02:00:00 +0000</pubDate>
