@@ -7,11 +7,102 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <lastBuildDate>Sat, 27 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://hangsz.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>撸毛加餐 全部项目列表</title>
+        <link>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-%E5%85%A8%E9%83%A8%E7%A9%BA%E6%8A%95%E9%A1%B9%E7%9B%AE%E6%95%99%E7%A8%8B%E5%88%97%E8%A1%A8-copy/</link>
+        <pubDate>Sat, 27 Apr 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-%E5%85%A8%E9%83%A8%E7%A9%BA%E6%8A%95%E9%A1%B9%E7%9B%AE%E6%95%99%E7%A8%8B%E5%88%97%E8%A1%A8-copy/</guid>
+        <description>&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;项目&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;状态&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;教程&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;0. 必要条件&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://hangsz.github.io/post/%e6%92%b8%e6%af%9b%e5%8a%a0%e9%a4%90-0.%e9%92%b1%e5%8c%85%e5%92%8c%e8%b4%a6%e5%8f%b7%e7%ad%89%e5%87%86%e5%a4%87/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;教程链接&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1.analog&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;进行中&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://hangsz.github.io/post/%e6%92%b8%e6%af%9b%e5%8a%a0%e9%a4%901.analog%e9%a1%b9%e7%9b%ae/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;教程链接&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;2.meson.network&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;进行中&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://hangsz.github.io/post/%e6%92%b8%e6%af%9b%e5%8a%a0%e9%a4%902.meson.network%e9%a1%b9%e7%9b%ae/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;教程链接&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;3.goplus&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;进行中&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://hangsz.github.io/post/%e6%92%b8%e6%af%9b%e5%8a%a0%e9%a4%903.goplus%e9%a1%b9%e7%9b%ae/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;教程链接&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;4.grass&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;进行中&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://hangsz.github.io/post/%e6%92%b8%e6%af%9b%e5%8a%a0%e9%a4%904.grass%e9%a1%b9%e7%9b%ae/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;教程链接&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;5.drift&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;进行中&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://hangsz.github.io/post/%e6%92%b8%e6%af%9b%e5%8a%a0%e9%a4%905.drift%e9%a1%b9%e7%9b%ae/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;教程链接&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;6.marginfi&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;进行中&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://hangsz.github.io/post/%e6%92%b8%e6%af%9b%e5%8a%a0%e9%a4%906.marginfi%e9%a1%b9%e7%9b%ae/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;教程链接&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;7.backpack&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;进行中&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://hangsz.github.io/post/%e6%92%b8%e6%af%9b%e5%8a%a0%e9%a4%907.backpack%e9%a1%b9%e7%9b%ae/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;教程链接&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;8.alienx&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;进行中&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://hangsz.github.io/post/%e6%92%b8%e6%af%9b%e5%8a%a0%e9%a4%908.alienx%e9%a1%b9%e7%9b%ae/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;教程链接&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;9.bitcraft&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;进行中&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://hangsz.github.io/post/%e6%92%b8%e6%af%9b%e5%8a%a0%e9%a4%909.bitcraft%e9%a1%b9%e7%9b%ae/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;教程链接&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;10.bob&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;进行中&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://hangsz.github.io/post/%e6%92%b8%e6%af%9b%e5%8a%a0%e9%a4%9010.bob%e9%a1%b9%e7%9b%ae/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;教程链接&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;11.parcl&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;进行中&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://hangsz.github.io/post/%e6%92%b8%e6%af%9b%e5%8a%a0%e9%a4%9011.parcl%e9%a1%b9%e7%9b%ae/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;教程链接&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+        </item>
+        <item>
         <title>撸毛加餐 0.钱包和账号等准备</title>
-        <link>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-0.%E9%92%B1%E5%8C%85%E5%92%8C%E8%B4%A6%E5%8F%B7%E7%AD%89%E5%87%86%E5%A4%87/</link>
+        <link>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%900.%E9%92%B1%E5%8C%85%E5%92%8C%E8%B4%A6%E5%8F%B7%E7%AD%89%E5%87%86%E5%A4%87/</link>
         <pubDate>Sun, 17 Mar 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-0.%E9%92%B1%E5%8C%85%E5%92%8C%E8%B4%A6%E5%8F%B7%E7%AD%89%E5%87%86%E5%A4%87/</guid>
+        <guid>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%900.%E9%92%B1%E5%8C%85%E5%92%8C%E8%B4%A6%E5%8F%B7%E7%AD%89%E5%87%86%E5%A4%87/</guid>
         <description>&lt;h3 id=&#34;0-kexueshangwang&#34;&gt;0. kexueshangwang&lt;/h3&gt;
 &lt;p&gt;买个vpn或者机场就行，很便宜，一个月几块钱。 不会的关注公众号 花半楼，给我留言&lt;/p&gt;
 &lt;h3 id=&#34;1-二次验证&#34;&gt;1. 二次验证&lt;/h3&gt;
@@ -111,10 +202,10 @@
         </item>
         <item>
         <title>撸毛加餐 7.backpack项目</title>
-        <link>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-7.backpack%E9%A1%B9%E7%9B%AE/</link>
+        <link>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%907.backpack%E9%A1%B9%E7%9B%AE/</link>
         <pubDate>Sun, 24 Mar 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-7.backpack%E9%A1%B9%E7%9B%AE/</guid>
+        <guid>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%907.backpack%E9%A1%B9%E7%9B%AE/</guid>
         <description>&lt;h3 id=&#34;说明&#34;&gt;说明&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -179,10 +270,10 @@
         </item>
         <item>
         <title>撸毛加餐 3.goplus项目</title>
-        <link>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-3.goplus%E9%A1%B9%E7%9B%AE/</link>
+        <link>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%903.goplus%E9%A1%B9%E7%9B%AE/</link>
         <pubDate>Wed, 20 Mar 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-3.goplus%E9%A1%B9%E7%9B%AE/</guid>
+        <guid>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%903.goplus%E9%A1%B9%E7%9B%AE/</guid>
         <description>&lt;h3 id=&#34;说明&#34;&gt;说明&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;玩币，安全第一，所以我把这个项目置顶。我建议每个人每个题都认真做，关键时刻能救命&lt;/li&gt;
@@ -227,10 +318,10 @@
         </item>
         <item>
         <title>撸毛加餐 11.parcl项目</title>
-        <link>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-11.parcl/</link>
+        <link>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%9011.parcl/</link>
         <pubDate>Sat, 27 Apr 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-11.parcl/</guid>
+        <guid>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%9011.parcl/</guid>
         <description>&lt;h3 id=&#34;说明&#34;&gt;说明&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;4.1号永久积分活动才开始，Q2才结束，目前是早期参与&lt;/li&gt;
@@ -286,10 +377,10 @@
         </item>
         <item>
         <title>撸毛加餐 10.bob项目</title>
-        <link>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-10.bob/</link>
+        <link>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%9010.bob/</link>
         <pubDate>Tue, 23 Apr 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-10.bob/</guid>
+        <guid>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%9010.bob/</guid>
         <description>&lt;h3 id=&#34;说明&#34;&gt;说明&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;5.1号正式主网上线，目前是一期末期，奖励更多的二期也马上开始了&lt;/li&gt;
@@ -346,10 +437,10 @@
         </item>
         <item>
         <title>撸毛加餐 9.bitcraft项目</title>
-        <link>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-9.bitcraft%E9%A1%B9%E7%9B%AE/</link>
+        <link>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%909.bitcraft%E9%A1%B9%E7%9B%AE/</link>
         <pubDate>Sat, 30 Mar 2024 02:00:00 +0000</pubDate>
         
-        <guid>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-9.bitcraft%E9%A1%B9%E7%9B%AE/</guid>
+        <guid>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%909.bitcraft%E9%A1%B9%E7%9B%AE/</guid>
         <description>&lt;h3 id=&#34;说明&#34;&gt;说明&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;链游，融资巨大，还处于早期，即将截止&lt;/li&gt;
@@ -384,11 +475,11 @@
 </description>
         </item>
         <item>
-        <title>撸毛加餐 8.alienx项目</title>
-        <link>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-8.alienx%E9%A1%B9%E7%9B%AE/</link>
+        <title>撸毛加餐8.alienx项目</title>
+        <link>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%908.alienx%E9%A1%B9%E7%9B%AE/</link>
         <pubDate>Sat, 30 Mar 2024 01:00:00 +0000</pubDate>
         
-        <guid>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-8.alienx%E9%A1%B9%E7%9B%AE/</guid>
+        <guid>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%908.alienx%E9%A1%B9%E7%9B%AE/</guid>
         <description>&lt;h3 id=&#34;说明&#34;&gt;说明&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -428,10 +519,10 @@
         </item>
         <item>
         <title>撸毛加餐 6.marginfi项目</title>
-        <link>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-6.marginfi%E9%A1%B9%E7%9B%AE/</link>
+        <link>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%906.marginfi%E9%A1%B9%E7%9B%AE/</link>
         <pubDate>Sat, 23 Mar 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-6.marginfi%E9%A1%B9%E7%9B%AE/</guid>
+        <guid>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%906.marginfi%E9%A1%B9%E7%9B%AE/</guid>
         <description>&lt;h3 id=&#34;说明&#34;&gt;说明&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;SOL生态的投资平台，预期有大毛的项目之一&lt;/li&gt;
@@ -485,10 +576,10 @@
         </item>
         <item>
         <title>撸毛加餐 5.drift项目</title>
-        <link>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-5.drift%E9%A1%B9%E7%9B%AE/</link>
+        <link>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%905.drift%E9%A1%B9%E7%9B%AE/</link>
         <pubDate>Fri, 22 Mar 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-5.drift%E9%A1%B9%E7%9B%AE/</guid>
+        <guid>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%905.drift%E9%A1%B9%E7%9B%AE/</guid>
         <description>&lt;h3 id=&#34;说明&#34;&gt;说明&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;SOL生态的合约交易平台，预期有大毛的项目之一&lt;/li&gt;
@@ -542,10 +633,10 @@
         </item>
         <item>
         <title>撸毛加餐 4.grass项目</title>
-        <link>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-4.grass%E9%A1%B9%E7%9B%AE/</link>
+        <link>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%904.grass%E9%A1%B9%E7%9B%AE/</link>
         <pubDate>Thu, 21 Mar 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-4.grass%E9%A1%B9%E7%9B%AE/</guid>
+        <guid>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%904.grass%E9%A1%B9%E7%9B%AE/</guid>
         <description>&lt;h3 id=&#34;说明&#34;&gt;说明&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;需要chrome/edge安装扩展，电脑开着挖矿，零成本&lt;/li&gt;
@@ -582,11 +673,11 @@
 </description>
         </item>
         <item>
-        <title>撸毛加餐 2.meson network项目</title>
-        <link>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-2.meson-network%E9%A1%B9%E7%9B%AE/</link>
+        <title>撸毛加餐2.meson network项目</title>
+        <link>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%902.meson.network%E9%A1%B9%E7%9B%AE/</link>
         <pubDate>Tue, 19 Mar 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-2.meson-network%E9%A1%B9%E7%9B%AE/</guid>
+        <guid>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%902.meson.network%E9%A1%B9%E7%9B%AE/</guid>
         <description>&lt;h3 id=&#34;说明&#34;&gt;说明&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;需要社交账户交互，零成本&lt;/li&gt;
@@ -687,10 +778,10 @@
         </item>
         <item>
         <title>撸毛加餐 1.analog项目</title>
-        <link>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-1.analog%E9%A1%B9%E7%9B%AE/</link>
+        <link>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%901.analog%E9%A1%B9%E7%9B%AE/</link>
         <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%90-1.analog%E9%A1%B9%E7%9B%AE/</guid>
+        <guid>https://hangsz.github.io/post/%E6%92%B8%E6%AF%9B%E5%8A%A0%E9%A4%901.analog%E9%A1%B9%E7%9B%AE/</guid>
         <description>&lt;h3 id=&#34;说明&#34;&gt;说明&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;不需要钱包交互，只需要社交账户交互，花费0$。&lt;/li&gt;
