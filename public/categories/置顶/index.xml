@@ -58,7 +58,9 @@
 &lt;h3 id=&#34;6-领水&#34;&gt;6. 领水&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://sepolia-faucet.pk910.de/#/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;ETH Sepolia&lt;/a&gt;，其他要求主网持有0.001个ETH，这个不需要，这个需要用自己机器挖一会&lt;/li&gt;
+    &gt;ETH Sepolia&lt;/a&gt;，现在需要过一个passport&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.alchemy.com/faucets/ethereum-sepolia&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ETH Sepolia&lt;/a&gt;, 要求主网持有0.001个ETH&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;助记词保护方法&#34;&gt;助记词保护方法&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;助记词任何人都不能告诉，任何地方都不能公开。&lt;/strong&gt;
